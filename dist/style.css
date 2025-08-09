@@ -843,6 +843,10 @@ video {
   max-width: 550px;
 }
 
+.max-w-\[95\%\] {
+  max-width: 95%;
+}
+
 .max-w-max {
   max-width: -moz-max-content;
   max-width: max-content;
@@ -2027,10 +2031,10 @@ ion-icon {
 
 @media (min-width: 1200px) {
   .header .container {
-    margin-left: 0px;
-    margin-right: 0px;
-    width: 50%;
-    max-width: calc(100% - 600px);
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1200px;
     padding-top: 1.75rem;
     padding-bottom: 1.75rem;
     padding-left: 1.75rem;
@@ -2041,7 +2045,7 @@ ion-icon {
 @media (min-width: 1400px) {
   .header .container {
     width: 100%;
-    max-width: calc(100% - 666px);
+    max-width: 1320px;
   }
 }
 
@@ -2049,9 +2053,10 @@ ion-icon {
   .header .container {
     margin-left: auto;
     margin-right: auto;
-    display: grid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     max-width: 1650px;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -2072,7 +2077,17 @@ ion-icon {
   transition-timing-function: cubic-bezier(0.22, 0.37, 1, 1);
 }
 
-@media (min-width: 1000px) {
+.navbar.active {
+  /* ensure mobile menu becomes visible when toggled */
+  transform: none;
+  visibility: visible;
+}
+
+@media (min-width: 768px) {
+  /* hide burger from tablet up to match inline navbar */
+  [data-nav-toggler] {
+    display: none !important;
+  }
   .navbar {
     position: relative;
     top: auto;
