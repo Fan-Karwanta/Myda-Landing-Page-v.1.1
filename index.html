@@ -1,0 +1,1793 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--
+    - primary meta tags
+  -->
+  <title>Myda | Website</title>
+  <meta name="title" content="Myda - Premium Massage Spa">
+  <meta name="description"
+    content="This is Myda - Premium Massage Spa">
+
+  <!--
+    - favicons
+  -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+  <link rel="icon" href="./assets/favicon/favicon.ico" sizes="any">
+  <link rel="manifest" href="./assets/favicon/site.webmanifest">
+  <meta name="theme-color" content="#b38b40">
+
+  <!-- 
+   - css link
+  -->
+  <link href="./dist/style.css" rel="stylesheet">
+
+  <!-- 
+    - custom font link
+  -->
+  <link rel="stylesheet" href="./assets/fonts/fonts.css">
+
+
+  <!--
+    - material icon link
+  -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close,menu,shopping_cart_checkout&display=block" />
+
+  <!-- 
+    - script link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+
+</head>
+
+<body class="bg-papaya_whip text-jet font-secondary">
+
+  <!-- 
+    - #Header
+  -->
+
+
+  <header class="header" data-header>
+    <div class="container relative flex justify-between items-center px-3 py-5 mx-auto">
+      <a href="#" class="logo">
+        <img src="./assets/images-new/MYDA_LOGO.png" width="200" height="25" alt="cozynest" class="w-48 md:w-52 lg:w-56 xxl:w-64">
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+          <span class="material-symbols-rounded" aria-hidden="true">
+            close
+          </span>
+        </button>
+
+        <ul class="md:flex md:items-center md:gap-3 xl:gap-7">
+          <li>
+            <a href="#home" class="navbar-link">Home</a>
+          </li>
+
+          
+          <li>
+            <a href="#about" class="navbar-link">About</a>
+          </li>
+          
+        <!--
+          <li>
+            <button class="navbar-link flex items-center gap-2 min-w-full" aria-label="shop" data-dropdown-toggler>
+              Shop
+
+              <ion-icon name="caret-forward-outline" aria-hidden="true" class="duration-200"></ion-icon>
+            </button>
+
+            <div class="dropdown" data-dropdown>
+              <div class="dropdown-content">
+                <a href="#" class="pt-2">All Products</a>
+                <a href="#" class="">Clothing</a>
+                <a href="#" class="">Candles</a>
+                <a href="#" class="">Accessories</a>
+                <a href="#" class="">Bags</a>
+                <a href="#" class="">Clocks</a>
+                <a href="#" class="pb-2">SALE 🏷️</a>
+              </div>
+            </div>
+          </li> -->
+
+          <li>
+            <a href="#services" class="navbar-link">Services</a>
+          </li>
+
+          <li>
+            <a href="./therapist.html" class="navbar-link">Our Therapist</a>
+          </li>
+
+          <li>
+            <a href="#contacts" class="navbar-link">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!--
+      <div class="rounded-md overflow-hidden flex items-center gap-3 lg:fixed lg:top-5 lg:right-5">
+        <button class="cart-toggler" aria-label="cart toggler" data-cart-toggler>
+          <span class="material-symbols-rounded text-papaya_whip" aria-hidden="true">
+            shopping_cart_checkout
+          </span>
+        </button>
+      -->
+        <div class="relative">
+          <div class="cart-modal" data-cart-modal>
+            <ul>
+              <li class="flex gap-2 pr-2">
+                <figure class="img-holder w-20 h-20 rounded-md flex-shrink-0" style="--width: 80; --height: 80">
+                  <img src="./assets/images/cart-1.jpg" width="80" height="80" loading="lazy"
+                    alt="Handmade painted coffee mug" class="img-cover">
+                </figure>
+
+                <div>
+                  <span class="text-caf_noir text-sm font-bold">Handmade painted coffee mug</span>
+
+                  <div class="flex items-center gap-1 text-[13px]">
+                    <p>1 ×</p>
+
+                    <p>$85.00</p>
+                  </div>
+                </div>
+
+                <button class="h-5 w-5 flex-shrink-0 mb-auto" aria-label="remove product">
+                  <span class="material-symbols-rounded" aria-hidden="true">
+                    close
+                  </span>
+                </button>
+              </li>
+
+              <div class="h-[1px] w-full my-3 bg-butterscotch_light"></div>
+
+              <li class="flex gap-2 pr-2">
+                <figure class="img-holder w-20 h-20 rounded-md flex-shrink-0" style="--width: 80; --height: 80">
+                  <img src="./assets/images/cart-2.jpg" width="80" height="80" loading="lazy"
+                    alt="Vintage Antique & Candle Holder">
+                </figure>
+
+                <div>
+                  <span class="text-caf_noir text-sm font-bold">Vintage Antique & Candle Holder</span>
+
+                  <div class="flex items-center gap-1 text-[13px]">
+                    <p>1 ×</p>
+
+                    <p>$990.00</p>
+                  </div>
+                </div>
+
+                <button class="h-5 w-5 flex-shrink-0 mb-auto" aria-label="remove product">
+                  <span class="material-symbols-rounded" aria-hidden="true">
+                    close
+                  </span>
+                </button>
+              </li>
+
+              <div class="h-[1px] w-full my-3 bg-butterscotch_light"></div>
+
+              <div class="flex justify-center items-center gap-2">
+                <a href="#" class="btn bg-butterscotch_light py-3 px-4" aria-label="checkout">
+                  checkout
+                </a>
+
+                <a href="#" class="btn btn-text py-3 px-4" aria-label="view cart">
+                  view cart
+                </a>
+              </div>
+            </ul>
+          </div>
+        </div>
+
+        <button class="h-10 w-10 grid place-items-center md:hidden" aria-label="toggle menu" data-nav-toggler>
+          <span class="material-symbols-rounded text-papaya_whip" aria-hidden="true">
+            menu
+          </span>
+        </button>
+      </div>
+
+      <div class="overlay" data-overlay data-nav-toggler></div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 
+      - #Hero
+    -->
+    <section class="hero" id="home">
+      <div class="container mx-auto px-3 pb-10 sm:px-7 md:py-16 lg:px-10 xl:px-16">
+        <div class="hero-content relative z-10 flex flex-col items-center justify-center min-h-[40vh] md:min-h-[50vh] px-4 md:px-0">
+          <div class="hero-text-container -mt-10 md:-mt-10 flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4 w-full max-w-4xl">
+            <h1 class="hero-heading text-white font-primary font-normal text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center md:whitespace-nowrap md:ml-[45rem]">
+              Experience a touch gold right in your home
+            </h1>
+            <a href="#" class="hero-button btn bg-butterscotch_light text-caf_noir font-medium py-3 px-6 text-base whitespace-nowrap flex-shrink-0 w-auto"
+              aria-label="book now">
+              Book now
+            </a>
+          </div>
+
+          <!--Trusted By Section Open-->
+          
+          <div class="mt-52">
+            <!--
+            <p class="text-white font-bold">Trusted by :</p>
+
+            <ul
+              class="brand-list flex items-center gap-5 overflow-x-auto snap-x snap-mandatory py-5 lg:mr-10 lg:px-3 lg:-ms-3">
+              <li class="brand-list-item">
+                <img src="./assets/images/brand-1.svg" alt="" class="w-32">
+              </li>
+              <li class="brand-list-item">
+                <img src="./assets/images/brand-2.svg" alt="" class="w-32">
+              </li>
+              <li class="brand-list-item">
+                <img src="./assets/images/brand-3.svg" alt="" class="w-[155px]">
+              </li>
+              <li class="brand-list-item">
+                <img src="./assets/images/brand-4.svg" alt="" class="w-[155px]">
+              </li>
+            </ul> -->
+          </div> 
+        </div>
+
+        <figure class="img-holder hero-banner mt-6 md:mt-0" style="--width: 868px; --height: 702px;">
+          <img src="./assets/images-new/hero-2.jpg" width="868" height="702" alt="hero image"
+            class="img-cover md:blur-lg md:brightness-[0.3] lg:block lg:blur-none lg:brightness-100">
+        </figure>
+      </div>
+    </section>
+
+     <!-- About Section Start -->
+    <section id="about" class="about-section relative overflow-hidden">
+      <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-14 xxl:px-20 py-12 sm:py-14 md:py-16 lg:py-20">
+        <div class="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-8">
+          <div class="md:col-span-3">
+            <h2 class="about-title font-semibold text-2xl md:text-3xl lg:text-4xl text-caf_noir">About</h2>
+          </div>
+          <div class="md:col-span-9">
+            <h3 class="about-subtitle">A golden ritual. Delivered to your door.</h3>
+
+            <div class="about-body">
+              <p>MYDA is a home luxury massage and wellness service designed for those who move through the world with purpose—and deserve a moment to pause. Inspired by the myth of Midas and the healing power of touch, we bring curated spa experiences directly into your home, transforming ordinary spaces into sanctuaries of calm and care.</p>
+
+              <p>Every treatment is delivered by highly trained therapists who understand that true luxury lies not in extravagance, but in intention. From the warmth of our linens to the scent of our oils, every detail is chosen to help you return to yourself.</p>
+
+              <p>Whether you need to unwind after a long day or reset your body and mind, MYDA offers personalized treatments that respect your time, your space, and your rhythm.</p>
+
+              <p>We are proudly offering our services across Abu Dhabi, with discreet, on-demand bookings that work around your schedule—no stress, no travel, no compromise.</p>
+
+              <p>Because wellness shouldn’t wait.</p>
+
+              <p><strong>It’s not just self-care. It’s self-respect.<br/>It’s a return to yourself, in gold.</strong></p>
+            </div>
+
+            <div class="about-cta">
+              <a href="#home" class="about-link">Back to home</a>
+              <a href="#book" class="about-link-underlined">Book now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Decorative hand image -->
+      <img src="./assets/images-new/myda_hand_brown_full.png" alt="" class="about-decor"/>
+    </section>
+
+    <!-- About Section End -->
+
+
+    <!-- Services Section Start -->
+    <section id="services" class="services-section relative overflow-hidden">
+      <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-14 xxl:px-20 py-12 sm:py-14 md:py-16 lg:py-20">
+        <div class="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-8 mb-6">
+          <div class="md:col-span-3">
+            <h2 class="about-title font-semibold text-2xl md:text-3xl lg:text-4xl">Our Services</h2>
+          </div>
+        </div>
+
+        <div class="services-grid">
+          <a class="service-card" href="#book" aria-label="Postnatal Massage">
+            <img src="./assets/images-new/massage_types/postnatal_massage_bellamama.jpg.webp" alt="Postnatal Massage" class="service-img" />
+            <div class="service-overlay">
+              <h3 class="service-title">Postnatal Massage</h3>
+              <div class="service-hover">
+                <h3 class="service-title service-title--hover">Postnatal Massage</h3>
+                <p class="service-desc">Gentle touch to restore, rebalance, and relieve tension after childbirth. You gave life—now let your body heal.</p>
+                <span class="service-cta">Book Now</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="service-card" href="#book" aria-label="Relaxation Massage">
+            <img src="./assets/images-new/massage_types/26.webp" alt="Relaxation Massage" class="service-img" />
+            <div class="service-overlay">
+              <h3 class="service-title">Relaxation Massage</h3>
+              <div class="service-hover">
+                <h3 class="service-title service-title--hover">Relaxation Massage</h3>
+                <p class="service-desc">Long flowing strokes to calm your nerves and ease everyday stress. Breathe deeply. This moment is yours.</p>
+                <span class="service-cta">Book Now</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="service-card" href="#book" aria-label="Slimming Lymphatic Combo Massage">
+            <img src="./assets/images-new/massage_types/iStock-520413044.jpg" alt="Slimming Lymphatic Combo Massage" class="service-img" />
+            <div class="service-overlay">
+              <h3 class="service-title">Slimming Lymphatic Combo Massage</h3>
+              <div class="service-hover">
+                <h3 class="service-title service-title--hover">Slimming Lymphatic Combo Massage</h3>
+                <p class="service-desc">A sculpting blend of firm strokes and drainage to tone and flush toxins. Feel lighter—inside and out.</p>
+                <span class="service-cta">Book Now</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="service-card" href="#book" aria-label="Slimming Massage">
+            <img src="./assets/images-new/massage_types/dsc6089-15399456973578_920x920_tt_90.jpg" alt="Slimming Massage" class="service-img" />
+            <div class="service-overlay">
+              <h3 class="service-title">Slimming Massage</h3>
+              <div class="service-hover">
+                <h3 class="service-title service-title--hover">Slimming Massage</h3>
+                <p class="service-desc">Targeted pressure to contour, break down fat, and boost circulation. Confidence starts with how you feel.</p>
+                <span class="service-cta">Book Now</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="service-card" href="#book" aria-label="Detox Massage">
+            <img src="./assets/images-new/massage_types/detox-massage-therapy-1.jpg" alt="Detox Massage" class="service-img" />
+            <div class="service-overlay">
+              <h3 class="service-title">Detox Massage</h3>
+              <div class="service-hover">
+                <h3 class="service-title service-title--hover">Detox Massage</h3>
+                <p class="service-desc">Gentle rhythmic movements to cleanse your system and boost immunity. Let go of buildup—let in balance.</p>
+                <span class="service-cta">Book Now</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="service-card" href="#book" aria-label="Lymphatic Drainage">
+            <img src="./assets/images-new/massage_types/legs-sports-massage-therapy-2021-08-26-16-53-49-utc.webp" alt="Lymphatic Drainage" class="service-img" />
+            <div class="service-overlay">
+              <h3 class="service-title">Lymphatic Drainage</h3>
+              <div class="service-hover">
+                <h3 class="service-title service-title--hover">Lymphatic Drainage</h3>
+                <p class="service-desc">Gentle rhythmic movements to cleanse your system and boost immunity. Let go of buildup—let in balance.</p>
+                <span class="service-cta">Book Now</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="service-card" href="#book" aria-label="Sleep Massage">
+            <img src="./assets/images-new/massage_types/hero-1.jpg" alt="Sleep Massage" class="service-img" />
+            <div class="service-overlay">
+              <h3 class="service-title">Sleep Massage</h3>
+              <div class="service-hover">
+                <h3 class="service-title service-title--hover">Sleep Massage</h3>
+                <p class="service-desc">Slow, soothing strokes to quiet the mind and promote deep, restorative rest. Drift off and wake renewed.</p>
+                <span class="service-cta">Book Now</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="service-card" href="#book" aria-label="Hot Stone Massage">
+            <img src="./assets/images-new/massage_types/hot-stone-massage-in-dubai-DWS.jpg" alt="Hot Stone Massage" class="service-img" />
+            <div class="service-overlay">
+              <h3 class="service-title">Hot Stone Massage</h3>
+              <div class="service-hover">
+                <h3 class="service-title service-title--hover">Hot Stone Massage</h3>
+                <p class="service-desc">Warm stones melt muscle tension and ground your energy. Let the heat heal what stress hides.</p>
+                <span class="service-cta">Book Now</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="service-card" href="#book" aria-label="Cupping Massage">
+            <img src="./assets/images-new/massage_types/94b91f7b-3522-4c12-86c4-1762f321d087.jpg" alt="Cupping Massage" class="service-img" />
+            <div class="service-overlay">
+              <h3 class="service-title">Cupping Massage</h3>
+              <div class="service-hover">
+                <h3 class="service-title service-title--hover">Cupping Massage</h3>
+                <p class="service-desc">Suction therapy to lift, release, and improve blood flow. Unstick what’s stuck—breathe freer.</p>
+                <span class="service-cta">Book Now</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="service-card" href="#book" aria-label="Sports Massage">
+            <img src="./assets/images-new/massage_types/massage-your-questions-answered.jpg" alt="Sports Massage" class="service-img" />
+            <div class="service-overlay">
+              <h3 class="service-title">Sports Massage</h3>
+              <div class="service-hover">
+                <h3 class="service-title service-title--hover">Sports Massage</h3>
+                <p class="service-desc">Performance-driven pressure to recover muscles and prevent injury. Train hard. Recover harder.</p>
+                <span class="service-cta">Book Now</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="service-card" href="#book" aria-label="Deep Tissue">
+            <img src="./assets/images-new/massage_types/ad.jpeg" alt="Deep Tissue" class="service-img" />
+            <div class="service-overlay">
+              <h3 class="service-title">Deep Tissue</h3>
+              <div class="service-hover">
+                <h3 class="service-title service-title--hover">Deep Tissue</h3>
+                <p class="service-desc">Intense pressure to target knots and chronic pain at the root. Relief doesn’t have to wait.</p>
+                <span class="service-cta">Book Now</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="service-card" href="#book" aria-label="Prenatal Massage">
+            <img src="./assets/images-new/massage_types/Prenatal1.png" alt="Prenatal Massage" class="service-img" />
+            <div class="service-overlay">
+              <h3 class="service-title">Prenatal Massage</h3>
+              <div class="service-hover">
+                <h3 class="service-title service-title--hover">Prenatal Massage</h3>
+                <p class="service-desc">Soothing strokes designed for your changing body and baby’s comfort. You’re growing life—be nurtured too.</p>
+                <span class="service-cta">Book Now</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="service-card" href="#book" aria-label="Reflexology Massage">
+            <img src="./assets/images-new/massage_types/dadad.png" alt="Reflexology Massage" class="service-img" />
+            <div class="service-overlay">
+              <h3 class="service-title">Reflexology Massage</h3>
+              <div class="service-hover">
+                <h3 class="service-title service-title--hover">Reflexology Massage</h3>
+                <p class="service-desc">Focused foot therapy to balance your entire body’s systems. Wellness starts from the sole.</p>
+                <span class="service-cta">Book Now</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="service-card" href="#book" aria-label="Balinese Massage">
+            <img src="./assets/images-new/massage_types/hero-1.jpg" alt="Balinese Massage" class="service-img" />
+            <div class="service-overlay">
+              <h3 class="service-title">Balinese Massage</h3>
+              <div class="service-hover">
+                <h3 class="service-title service-title--hover">Balinese Massage</h3>
+                <p class="service-desc">A tropical fusion of acupressure, stretches, and essential oils. Find your flow in every breath.</p>
+                <span class="service-cta">Book Now</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="service-card" href="#book" aria-label="Thai Massage">
+            <img src="./assets/images-new/massage_types/thai-massage-2-1024x683.jpg" alt="Thai Massage" class="service-img" />
+            <div class="service-overlay">
+              <h3 class="service-title">Thai Massage</h3>
+              <div class="service-hover">
+                <h3 class="service-title service-title--hover">Thai Massage</h3>
+                <p class="service-desc">Stretch-based therapy to energize, realign, and awaken your body. Let movement be your medicine.</p>
+                <span class="service-cta">Book Now</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="service-card" href="#book" aria-label="Aromatherapy">
+            <img src="./assets/images-new/massage_types/aromatherapy-massageAA.jpg" alt="Aromatherapy" class="service-img" />
+            <div class="service-overlay">
+              <h3 class="service-title">Aromatherapy</h3>
+              <div class="service-hover">
+                <h3 class="service-title service-title--hover">Aromatherapy</h3>
+                <p class="service-desc">Essential oils + massage to calm the mind and awaken the senses. Let your body inhale peace.</p>
+                <span class="service-cta">Book Now</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Services Section End -->
+
+    <!-- Randomizer script removed as requested; images remain fixed. -->
+
+
+    <!-- Testimonials Section Start 1 -->
+    <section id="testimonials" class="testimonials-section relative overflow-hidden">
+      <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-14 xxl:px-20 py-12 sm:py-14 md:py-16 lg:py-20">
+        <div class="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-8 mb-6">
+          <div class="md:col-span-3">
+            <h2 class="about-title font-semibold text-2xl md:text-3xl lg:text-4xl">Testimonials:</h2>
+          </div>
+        </div>
+
+        <div class="testimonials-grid">
+          <article class="testimonial">
+            <p class="testimonial-quote">&ldquo;I had stressful child delivery after my 2nd pregnancy<br/>there post natal massage are the best&rdquo;</p>
+            <div class="testimonial-meta">
+              <img src="./assets/images/avatar-1.png" alt="Avatar of moona97156" class="testimonial-avatar" />
+              <span class="testimonial-handle">@moona97156</span>
+            </div>
+          </article>
+
+          <article class="testimonial">
+            <p class="testimonial-quote">&ldquo;there sports massage is to go for after a long hour<br/>of training for my first marathon I suggest you go<br/>for the 2 hour sessions&rdquo;</p>
+            <div class="testimonial-meta">
+              <img src="./assets/images/avatar-2.png" alt="Avatar of hassanIGa" class="testimonial-avatar" />
+              <span class="testimonial-handle">@hassanIGa</span>
+            </div>
+          </article>
+
+          <article class="testimonial">
+            <p class="testimonial-quote">&ldquo;It&rsquo;s the aroma theraphy all the time&rdquo;</p>
+            <div class="testimonial-meta">
+              <img src="./assets/images/avatar-3.png" alt="Avatar of danyboy345" class="testimonial-avatar" />
+              <span class="testimonial-handle">@danyboy345</span>
+            </div>
+          </article>
+
+          <article class="testimonial">
+            <p class="testimonial-quote">&ldquo;the Thai massage and the Balinese are my go to<br/>it always feels like im in wellness resort somewhere<br/>in the far east&rdquo;</p>
+            <div class="testimonial-meta">
+              <img src="./assets/images/avatar-4.jpeg" alt="Avatar of rachelNWsta" class="testimonial-avatar" />
+              <span class="testimonial-handle">@rachelNWsta</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials Section End 1-->
+
+
+    <!-- Sleep Massage Section Start -->
+    <section id="sleep" class="sleep-section">
+      <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-14 xxl:px-20 py-10 md:py-14 lg:py-16">
+        <div class="sleep-grid">
+          <!-- Visual / Image -->
+          <figure class="sleep-visual">
+            <img src="./assets/images-new/massage_types/hero-1.jpg" alt="Sleep Massage" class="sleep-img" />
+            <figcaption class="sleep-title">Sleep Massage</figcaption>
+          </figure>
+
+          <!-- Content Panel -->
+          <div class="sleep-panel">
+            <div class="sleep-panel-inner">
+              <p class="sleep-desc">
+                A deeply soothing, slow-pressure massage designed to quiet the nervous system and guide the body into a state of deep rest. Using gentle, rhythmic strokes and calming aromatherapy, this treatment promotes relaxation, reduces anxiety, and encourages uninterrupted sleep. Perfect for unwinding before bed or resetting after restless nights.
+              </p>
+              <p class="sleep-desc strong">Let the world drift away. You deserve real rest.</p>
+
+              <p class="sleep-choose">Choose what you deserve</p>
+
+              <div class="sleep-pricing">
+                <a href="#book" class="sleep-price-card" aria-label="Book 60 minute Sleep Massage">
+                  <span class="sleep-price">60</span>
+                  <span class="sleep-unit">mins</span>
+                  <span class="sleep-cost">aed 350</span>
+                </a>
+
+                <a href="#book" class="sleep-price-card" aria-label="Book 90 minute Sleep Massage">
+                  <span class="sleep-price">90</span>
+                  <span class="sleep-unit">mins</span>
+                  <span class="sleep-cost">aed 450</span>
+                </a>
+
+                <a href="#book" class="sleep-price-card" aria-label="Book 120 minute Sleep Massage">
+                  <span class="sleep-price">120</span>
+                  <span class="sleep-unit">mins</span>
+                  <span class="sleep-cost"> aed 550</span>
+                </a>
+              </div>
+
+              <div class="sleep-actions">
+                <a href="#services" class="sleep-link">Back to our services</a>
+                <a href="#book" class="sleep-link-underlined">Book now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Sleep Massage Section End -->
+
+    <!-- 
+      - #Contact Section
+    -->
+    <section id="contact" class="contact-section">
+      <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-14 xxl:px-20 py-12 sm:py-14 md:py-16 lg:py-20">
+        <div class="contact-container">
+          <!-- Background Hand Icon -->
+          <div class="contact-bg-hand">
+            <img src="./assets/images-new/myda_hand_brown_full.png" alt="Hand Background" class="contact-hand-bg" />
+          </div>
+          
+          <!-- Top Right Hand Icon -->
+          <div class="contact-corner-hand">
+            <img src="./assets/images-new/myda_hand_brown_full.png" alt="Hand Icon" class="contact-hand-corner" />
+          </div>
+          
+          <!-- Contact Form Content -->
+          <div class="contact-content">
+            <!-- Logo -->
+            <div class="contact-logo">
+              <img src="./assets/images-new/MYDA_LOGO.png" alt="MYDA Logo" class="contact-logo-img" />
+            </div>
+            
+            <!-- Contact Form -->
+            <form class="contact-form">
+              <div class="contact-field">
+                <input type="text" id="contact-name" name="name" class="contact-input" placeholder="name:" />
+              </div>
+              
+              <div class="contact-field">
+                <input type="tel" id="contact-tel" name="tel" class="contact-input" placeholder="tel no.:" />
+              </div>
+              
+              <a href="#" class="contact-submit-link">Send OTP</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section End -->
+
+    <!-- 
+      - #Product showcase
+    -->
+    
+    <!-- 
+      - #Footer
+    -->
+    <footer id="footer" class="site-footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <!-- Contact details -->
+          <div class="footer-col footer-contact">
+            <h3 class="footer-heading">Contact us:</h3>
+            <div class="footer-row">
+              <span class="footer-label">Address:</span>
+              <p class="footer-value">Lorem ipsum Dolor Init – Abu Dhabi UAE</p>
+            </div>
+            <div class="footer-row">
+              <span class="footer-label">Tel no.:</span>
+              <a href="tel:+9715645880944" class="footer-value">+97156 45880944</a>
+            </div>
+            <div class="footer-row">
+              <span class="footer-label">email us:</span>
+              <a href="mailto:info@myda.ae" class="footer-value">info@myda.ae</a>
+            </div>
+          </div>
+
+          <!-- Social links -->
+          <div class="footer-col footer-social">
+            <h3 class="footer-heading">Follow us:</h3>
+            <ul class="footer-social-list" aria-label="social links">
+              <li><a href="#" aria-label="Facebook"><ion-icon name="logo-facebook"></ion-icon></a></li>
+              <li><a href="#" aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a></li>
+              <li><a href="#" aria-label="Telegram"><ion-icon name="paper-plane-outline"></ion-icon></a></li>
+              <li><a href="#" aria-label="WhatsApp"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+              <li><a href="#" aria-label="TikTok"><ion-icon name="logo-tiktok"></ion-icon></a></li>
+            </ul>
+          </div>
+
+          <!-- Newsletter form -->
+          <div class="footer-col footer-newsletter">
+            <h3 class="footer-heading">Sign up to our Newsletter, Promotions and Deals</h3>
+            <form class="footer-form" action="#" method="post">
+              <input type="text" name="name" class="footer-input" placeholder="name:" />
+              <input type="tel" name="tel" class="footer-input" placeholder="tel no.:" />
+              <button type="submit" class="footer-submit">subscribe</button>
+            </form>
+          </div>
+        </div>
+
+        <p class="footer-legal">© 2025 MYDA. All rights reserved. MYDA is a registered brand under UAE copyright law. Any unauthorized use of its logo, content, or visual assets is strictly prohibited and subject to legal action.</p>
+      </div>
+    </footer>
+
+    <!-- Categories comment out -->
+
+    <!-- Product showcase comment out 
+
+    <div
+      class="bg-papaya_whip relative sm:before:absolute sm:before:bottom-0 sm:before:left-2/4 sm:before:-translate-x-2/4 sm:before:rounded-full sm:before:w-[92%] sm:before:h-[100%] sm:before:-z-10 sm:before:shadow-[0_0_50px_25px_#00000038]">
+      <div class="container mx-auto px-3 py-10 sm:px-7 md:px-10 xl:px-14 xxl:px-20">
+        <div class="mx-auto grid gap-3 sm:grid-cols-2 sm:grid-rows-2 lg:grid-cols-3 xl:gap-5">
+
+          <div class="card sm:row-span-2 md:min-h-[712px] lg:min-h-[600px] xxl:min-h-[600px]"
+            style="background-image: url('./assets/images/product-showcase-1.jpg')">
+            <p class="text-licorice text-2xl font-bold">Postnatal Massage</p>
+            <p class="text-caf_noir text-lg">954 Products</p>
+          </div>
+
+          <div class="card" style="background-image: url('./assets/images/product-showcase-2.jpg')">
+            <p class="text-licorice text-2xl font-bold">Relaxation Massage</p>
+            <p class="text-caf_noir text-lg">184 Products</p>
+          </div>
+
+          <div class="card" style="background-image: url('./assets/images/product-showcase-3.jpg')">
+            <p class="text-licorice text-2xl font-bold">Slimming Lymphatic Combo Massage</p>
+            <p class="text-caf_noir text-lg">956 Products</p>
+          </div>
+
+          <div class="card" style="background-image: url('./assets/images/product-showcase-4.jpg')">
+            <p class="text-licorice text-2xl font-bold">Detox Massage</p>
+            <p class="text-caf_noir text-lg">710 Products</p>
+          </div>
+
+          <div class="card" style="background-image: url('./assets/images/product-showcase-5.jpg')">
+            <p class="text-licorice text-2xl font-bold">Lymphatic Drainage</p>
+            <p class="text-caf_noir text-lg">710 Products</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+    <div
+      class="bg-papaya_whip relative sm:before:absolute sm:before:bottom-0 sm:before:left-2/4 sm:before:-translate-x-2/4 sm:before:rounded-full sm:before:w-[92%] sm:before:h-[100%] sm:before:-z-10 sm:before:shadow-[0_0_50px_25px_#00000038]">
+      <div class="container mx-auto px-3 py-10 sm:px-7 md:px-10 xl:px-14 xxl:px-20">
+        <div class="mx-auto grid gap-3 sm:grid-cols-2 sm:grid-rows-2 lg:grid-cols-3 xl:gap-5">
+
+          <div class="card sm:row-span-2 md:min-h-[712px] lg:min-h-[600px] xxl:min-h-[600px]"
+            style="background-image: url('./assets/images/product-showcase-1.jpg')">
+            <p class="text-licorice text-2xl font-bold">Postnatal Massage</p>
+            <p class="text-caf_noir text-lg">954 Products</p>
+          </div>
+
+          <div class="card" style="background-image: url('./assets/images/product-showcase-2.jpg')">
+            <p class="text-licorice text-2xl font-bold">Relaxation Massage</p>
+            <p class="text-caf_noir text-lg">184 Products</p>
+          </div>
+
+          <div class="card" style="background-image: url('./assets/images/product-showcase-3.jpg')">
+            <p class="text-licorice text-2xl font-bold">Slimming Lymphatic Combo Massage</p>
+            <p class="text-caf_noir text-lg">956 Products</p>
+          </div>
+
+          <div class="card" style="background-image: url('./assets/images/product-showcase-4.jpg')">
+            <p class="text-licorice text-2xl font-bold">Detox Massage</p>
+            <p class="text-caf_noir text-lg">710 Products</p>
+          </div>
+
+          <div class="card" style="background-image: url('./assets/images/product-showcase-5.jpg')">
+            <p class="text-licorice text-2xl font-bold">Lymphatic Drainage</p>
+            <p class="text-caf_noir text-lg">710 Products</p>
+          </div>
+
+        </div>
+      </div>
+    </div>  Categories comment out -->
+
+    <!-- 
+      - #Product categories
+
+      - These are some sample components that may be useful in the future
+      - But for now we are going to comment them out.
+    -->
+
+    <!-- 
+      - #Product categories
+    
+
+    <section>
+      <div
+        class="container mx-auto px-3 py-10 grid gap-6 sm:px-7 md:grid-cols-[0.8fr_1fr] md:items-center md:gap-0 lg:py-24 lg:grid-cols-[0.8fr_1fr] xl:grid-cols-[0.5fr_1fr] xl:py-20 xl:px-10">
+
+        <div class="md:mb-16">
+          <h1 class="text-caf_noir font-primary font-bold text-6xl text-center my-3 md:text-start lg:text-7xl">
+            Our Product Categories
+          </h1>
+
+          <p class="text-jet text-center text-lg md:hidden">
+            Explore our curated popular collection product categories featuring high-quality.
+          </p>
+
+          <a href="#"
+            class="btn bg-butterscotch_light py-3 px-10 mt-5 mx-auto hidden md:block md:mx-0 md:mt-10 lg:py-4 lg:mx-0"
+            aria-label="shop">
+            view products
+          </a>
+        </div>
+
+        <div class="grid gap-3 md:gap-5 lg:gap-10" data-slider-container>
+          <ul class="slider h-[450px] sm:max-w-[540px] sm:ms-5 md:max-w-full md:ms-0" data-slider>
+
+            <li class="slider-item group pb-6 space-y-5 w-64 rounded-lg">
+              <div class="relative overflow-hidden">
+                <figure class="img-holder rounded-lg h-80" style="--width: 265px; --height: 320px">
+                  <img src="./assets/images/slide-1.jpg" width="265" height="320" loading="lazy" alt="sweater"
+                    class="img-cover duration-[0.5s] ease-linear group-hover:scale-105">
+                </figure>
+
+                <div
+                  class="bg-[#d89245c7] text-white px-3 py-1 absolute top-2/4 left-2/4 -translate-x-2/4 flex items-center opacity-0 duration-75 ease-linear group-hover:-translate-y-2/4 group-hover:opacity-100">
+                  <a href="#" class="h-9 w-9 grid place-items-center">
+                    <ion-icon name="bag-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                  </a>
+
+                  <a href="#" class="h-9 w-9 grid place-items-center">
+                    <ion-icon name="heart-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                  </a>
+
+                  <a href="#" class="h-9 w-9 grid place-items-center">
+                    <ion-icon name="eye-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                  </a>
+                </div>
+              </div>
+
+              <div class="card-content space-y-2">
+                <div class="flex justify-between items-start">
+                  <p class="text-lg text-jet font-bold">Attire</p>
+
+                  <span class="bg-butterscotch px-2 py-1 text-sm text-papaya_whip font-bold">$25.75</span>
+                </div>
+
+                <p class="product-detail">
+                  Artisanal designs that make every day a feast
+                </p>
+              </div>
+            </li>
+
+            <li class="slider-item group pb-6 space-y-5 w-64 rounded-lg">
+              <div class="relative overflow-hidden">
+                <figure class="img-holder rounded-lg h-80" style="--width: 256px; --height: 384px">
+                  <img src="./assets/images/slide-2.jpg" width="256" height="384" loading="lazy" alt="sweater"
+                    class="img-cover duration-[0.5s] ease-linear group-hover:scale-105">
+                </figure>
+
+                <div
+                  class="bg-[#d89245c7] text-white px-3 py-1 absolute top-2/4 left-2/4 -translate-x-2/4 flex items-center opacity-0 duration-75 ease-linear group-hover:-translate-y-2/4 group-hover:opacity-100">
+                  <a href="#" class="h-9 w-9 grid place-items-center">
+                    <ion-icon name="bag-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                  </a>
+
+                  <a href="#" class="h-9 w-9 grid place-items-center">
+                    <ion-icon name="heart-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                  </a>
+
+                  <a href="#" class="h-9 w-9 grid place-items-center">
+                    <ion-icon name="eye-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                  </a>
+                </div>
+              </div>
+
+              <div class="card-content space-y-2">
+                <div class="flex justify-between items-start">
+                  <p class="text-lg text-jet font-bold">Jewellery</p>
+
+                  <span class="bg-butterscotch px-2 py-1 text-sm text-papaya_whip font-bold">$25.75</span>
+                </div>
+
+                <p class="product-detail">
+                  Casual yet sophisticated pieces for every room in the house
+                </p>
+              </div>
+            </li>
+
+            <li class="slider-item group pb-6 space-y-5 w-64 rounded-lg">
+              <div class="relative overflow-hidden">
+                <figure class="img-holder rounded-lg h-80" style="--width: 256px; --height: 308px">
+                  <img src="./assets/images/slide-3.jpg" width="256" height="308" loading="lazy" alt="sweater"
+                    class="img-cover duration-[0.5s] ease-linear group-hover:scale-105">
+                </figure>
+
+                <div
+                  class="bg-[#d89245c7] text-white px-3 py-1 absolute top-2/4 left-2/4 -translate-x-2/4 flex items-center opacity-0 duration-75 ease-linear group-hover:-translate-y-2/4 group-hover:opacity-100">
+                  <a href="#" class="h-9 w-9 grid place-items-center">
+                    <ion-icon name="bag-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                  </a>
+
+                  <a href="#" class="h-9 w-9 grid place-items-center">
+                    <ion-icon name="heart-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                  </a>
+
+                  <a href="#" class="h-9 w-9 grid place-items-center">
+                    <ion-icon name="eye-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                  </a>
+                </div>
+              </div>
+
+              <div class="card-content space-y-2">
+                <div class="flex justify-between items-start">
+                  <p class="text-lg text-jet font-bold">Decor</p>
+
+                  <span class="bg-butterscotch px-2 py-1 text-sm text-papaya_whip font-bold">$25.75</span>
+                </div>
+
+                <p class="product-detail">
+                  Tasteful elements to mix and match for an elevated look
+                </p>
+              </div>
+            </li>
+
+            <li class="slider-item group pb-6 space-y-5 w-64 rounded-lg">
+              <div class="relative overflow-hidden">
+                <figure class="img-holder rounded-lg h-80" style="--width: 256px; --height: 341px">
+                  <img src="./assets/images/slide-4.jpg" width="256" height="341" loading="lazy" alt="sweater"
+                    class="img-cover duration-[0.5s] ease-linear group-hover:scale-105">
+                </figure>
+
+                <div
+                  class="bg-[#d89245c7] text-white px-3 py-1 absolute top-2/4 left-2/4 -translate-x-2/4 flex items-center opacity-0 duration-75 ease-linear group-hover:-translate-y-2/4 group-hover:opacity-100">
+                  <a href="#" class="h-9 w-9 grid place-items-center">
+                    <ion-icon name="bag-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                  </a>
+
+                  <a href="#" class="h-9 w-9 grid place-items-center">
+                    <ion-icon name="heart-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                  </a>
+
+                  <a href="#" class="h-9 w-9 grid place-items-center">
+                    <ion-icon name="eye-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                  </a>
+                </div>
+              </div>
+
+              <div class="card-content space-y-2">
+                <div class="flex justify-between items-start">
+                  <p class="text-lg text-jet font-bold">Bag</p>
+
+                  <span class="bg-butterscotch px-2 py-1 text-sm text-papaya_whip font-bold">$25.75</span>
+                </div>
+
+                <p class="product-detail">
+                  Artisanal designs that make every day a feast
+                </p>
+              </div>
+            </li>
+
+            <li class="slider-item group pb-6 space-y-5 w-64 rounded-lg">
+              <div class="relative overflow-hidden">
+                <figure class="img-holder rounded-lg h-80" style="--width: 256px; --height: 256px">
+                  <img src="./assets/images/slide-5.jpg" width="256" height="256" loading="lazy" alt="sweater"
+                    class="img-cover duration-[0.5s] ease-linear group-hover:scale-105">
+                </figure>
+
+                <div
+                  class="bg-[#d89245c7] text-white px-3 py-1 absolute top-2/4 left-2/4 -translate-x-2/4 flex items-center opacity-0 duration-75 ease-linear group-hover:-translate-y-2/4 group-hover:opacity-100">
+                  <a href="#" class="h-9 w-9 grid place-items-center">
+                    <ion-icon name="bag-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                  </a>
+
+                  <a href="#" class="h-9 w-9 grid place-items-center">
+                    <ion-icon name="heart-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                  </a>
+
+                  <a href="#" class="h-9 w-9 grid place-items-center">
+                    <ion-icon name="eye-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                  </a>
+                </div>
+              </div>
+
+              <div class="card-content space-y-2">
+                <div class="flex justify-between items-start">
+                  <p class="text-lg text-jet font-bold">Wool Panda Bag</p>
+
+                  <span class="bg-butterscotch px-2 py-1 text-sm text-papaya_whip font-bold">$25.75</span>
+                </div>
+
+                <p class="product-detail">
+                  Casual yet sophisticated pieces for every room in the house
+                </p>
+              </div>
+            </li>
+
+            <li class="slider-item group pb-6 space-y-5 w-64 rounded-lg">
+              <div class="relative overflow-hidden">
+                <figure class="img-holder rounded-lg h-80" style="--width: 256px; --height: 342px">
+                  <img src="./assets/images/slide-6.jpg" width="256" height="342" loading="lazy" alt="sweater"
+                    class="img-cover duration-[0.5s] ease-linear group-hover:scale-105">
+                </figure>
+
+                <div
+                  class="bg-[#d89245c7] text-white px-3 py-1 absolute top-2/4 left-2/4 -translate-x-2/4 flex items-center opacity-0 duration-75 ease-linear group-hover:-translate-y-2/4 group-hover:opacity-100">
+                  <a href="#" class="h-9 w-9 grid place-items-center">
+                    <ion-icon name="bag-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                  </a>
+
+                  <a href="#" class="h-9 w-9 grid place-items-center">
+                    <ion-icon name="heart-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                  </a>
+
+                  <a href="#" class="h-9 w-9 grid place-items-center">
+                    <ion-icon name="eye-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                  </a>
+                </div>
+              </div>
+
+              <div class="card-content space-y-2">
+                <div class="flex justify-between items-start">
+                  <p class="text-lg text-jet font-bold">Decor</p>
+
+                  <span class="bg-butterscotch px-2 py-1 text-sm text-papaya_whip font-bold">$25.75</span>
+                </div>
+
+                <p class="product-detail">
+                  Tasteful elements to mix and match for an elevated look
+                </p>
+              </div>
+            </li>
+
+            <li class="slider-item group pb-6 space-y-5 w-64 rounded-lg">
+              <div class="relative overflow-hidden">
+                <figure class="img-holder rounded-lg h-80" style="--width: 256px; --height: 368px">
+                  <img src="./assets/images/slide-7.jpg" width="256" height="368" loading="lazy" alt="sweater"
+                    class="img-cover duration-[0.5s] ease-linear group-hover:scale-105">
+                </figure>
+
+                <div
+                  class="bg-[#d89245c7] text-white px-3 py-1 absolute top-2/4 left-2/4 -translate-x-2/4 flex items-center opacity-0 duration-75 ease-linear group-hover:-translate-y-2/4 group-hover:opacity-100">
+                  <a href="#" class="h-9 w-9 grid place-items-center">
+                    <ion-icon name="bag-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                  </a>
+
+                  <a href="#" class="h-9 w-9 grid place-items-center">
+                    <ion-icon name="heart-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                  </a>
+
+                  <a href="#" class="h-9 w-9 grid place-items-center">
+                    <ion-icon name="eye-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                  </a>
+                </div>
+              </div>
+
+              <div class="card-content space-y-2">
+                <div class="flex justify-between items-start">
+                  <p class="text-lg text-jet font-bold">Autumn aesthetic candles</p>
+
+                  <span class="bg-butterscotch px-2 py-1 text-sm text-papaya_whip font-bold">$25.75</span>
+                </div>
+
+                <p class="product-detail">
+                  Tasteful elements to mix and match for an elevated look
+                </p>
+              </div>
+            </li>
+
+            <li class="slider-item group pb-6 space-y-5 w-64 rounded-lg">
+              <div class="relative overflow-hidden">
+                <figure class="img-holder rounded-lg h-80" style="--width: 256px; --height: 255px">
+                  <img src="./assets/images/slide-8.jpg" width="256" height="255" loading="lazy" alt="sweater"
+                    class="img-cover duration-[0.5s] ease-linear group-hover:scale-105">
+                </figure>
+
+                <div
+                  class="bg-[#d89245c7] text-white px-3 py-1 absolute top-2/4 left-2/4 -translate-x-2/4 flex items-center opacity-0 duration-75 ease-linear group-hover:-translate-y-2/4 group-hover:opacity-100">
+                  <a href="#" class="h-9 w-9 grid place-items-center">
+                    <ion-icon name="bag-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                  </a>
+
+                  <a href="#" class="h-9 w-9 grid place-items-center">
+                    <ion-icon name="heart-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                  </a>
+
+                  <a href="#" class="h-9 w-9 grid place-items-center">
+                    <ion-icon name="eye-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                  </a>
+                </div>
+              </div>
+
+              <div class="card-content space-y-2">
+                <div class="flex justify-between items-start">
+                  <p class="text-lg text-jet font-bold">Candle</p>
+
+                  <span class="bg-butterscotch px-2 py-1 text-sm text-papaya_whip font-bold">$25.75</span>
+                </div>
+
+                <p class="product-detail">
+                  Tasteful elements to mix and match for an elevated look
+                </p>
+              </div>
+            </li>
+
+            <li class="slider-item group pb-6 space-y-5 w-64 rounded-lg">
+              <div class="relative overflow-hidden">
+                <figure class="img-holder rounded-lg h-80" style="--width: 256px; --height: 292px">
+                  <img src="./assets/images/slide-9.jpg" width="256" height="292" loading="lazy" alt="sweater"
+                    class="img-cover duration-[0.5s] ease-linear group-hover:scale-105">
+                </figure>
+
+                <div
+                  class="bg-[#d89245c7] text-white px-3 py-1 absolute top-2/4 left-2/4 -translate-x-2/4 flex items-center opacity-0 duration-75 ease-linear group-hover:-translate-y-2/4 group-hover:opacity-100">
+                  <a href="#" class="h-9 w-9 grid place-items-center">
+                    <ion-icon name="bag-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                  </a>
+
+                  <a href="#" class="h-9 w-9 grid place-items-center">
+                    <ion-icon name="heart-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                  </a>
+
+                  <a href="#" class="h-9 w-9 grid place-items-center">
+                    <ion-icon name="eye-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                  </a>
+                </div>
+              </div>
+
+              <div class="card-content space-y-2">
+                <div class="flex justify-between items-start">
+                  <p class="text-lg text-jet font-bold">Art Wall Frame</p>
+
+                  <span class="bg-butterscotch px-2 py-1 text-sm text-papaya_whip font-bold">$25.75</span>
+                </div>
+
+                <p class="product-detail">
+                  Tasteful elements to mix and match for an elevated look
+                </p>
+              </div>
+            </li>
+
+            <li class="slider-item group pb-6 space-y-5 w-64 rounded-lg">
+              <div class="relative overflow-hidden">
+                <figure class="img-holder rounded-lg h-80" style="--width: 256px; --height: 256px">
+                  <img src="./assets/images/slide-10.jpg" width="256" height="256" loading="lazy" alt="sweater"
+                    class="img-cover duration-[0.5s] ease-linear group-hover:scale-105">
+                </figure>
+
+                <div
+                  class="bg-[#d89245c7] text-white px-3 py-1 absolute top-2/4 left-2/4 -translate-x-2/4 flex items-center opacity-0 duration-75 ease-linear group-hover:-translate-y-2/4 group-hover:opacity-100">
+                  <a href="#" class="h-9 w-9 grid place-items-center">
+                    <ion-icon name="bag-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                  </a>
+
+                  <a href="#" class="h-9 w-9 grid place-items-center">
+                    <ion-icon name="heart-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                  </a>
+
+                  <a href="#" class="h-9 w-9 grid place-items-center">
+                    <ion-icon name="eye-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                  </a>
+                </div>
+              </div>
+
+              <div class="card-content space-y-2">
+                <div class="flex justify-between items-start">
+                  <p class="text-lg text-jet font-bold">Autumn leaf</p>
+
+                  <span class="bg-butterscotch px-2 py-1 text-sm text-papaya_whip font-bold">$25.75</span>
+                </div>
+
+                <p class="product-detail">
+                  Tasteful elements to mix and match for an elevated look
+                </p>
+              </div>
+            </li>
+
+          </ul>
+
+          <div class="flex items-center gap-3 mx-auto md:-order-1 md:mx-0 md:ms-auto">
+            <button class="arrow-button" aria-label="slide prev" data-prev-btn>
+              <ion-icon name="chevron-back-outline" aria-hidden="true" class="text-caf_noir font-bold"></ion-icon>
+            </button>
+
+            <button class="arrow-button" aria-label="slide prev" data-next-btn>
+              <ion-icon name="chevron-forward-outline" aria-hidden="true" class="text-caf_noir font-bold"></ion-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+      - #Blog
+   
+
+    <section class="bg-caf_noir text-white relative overflow-hidden" id="blog">
+      <div
+        class="container mx-auto px-3 py-10 grid gap-10 relative z-[1] sm:gap-5 sm:grid-cols-2 sm:items-center sm:px-7 md:py-16 md:items-stretch lg:py-24 xl:py-20 xl:px-10">
+
+        <div class="md:grid md:content-between">
+          <div>
+            <h1 class="font-primary font-bold text-5xl mb-4 sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+              Handmade Decor: <br> The Power of Selling Online
+            </h1>
+
+            <p class="text-lg italic mb-10 lg:max-w-md xl:text-2xl xl:max-w-lg">
+              Discover how selling online can grow your handmade decor business.
+            </p>
+          </div>
+
+          <div>
+            <p class="font-bold sm:text-sm md:text-base">
+              September 16-18, 2025 <br>
+              Paragon One Plaza and Sky Garden
+            </p>
+
+            <a href="#" class="btn bg-butterscotch_light py-3 px-10 mt-5 cursor-pointer lg:mx-0 lg:py-4"
+              aria-label="read more">
+              Read more
+
+              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </a>
+          </div>
+        </div>
+
+        <div class="grid gap-3 max-w-md ms-auto lg:grid-cols-3 lg:max-w-full">
+          <div class="grid grid-cols-3 gap-3 lg:col-span-2">
+            <figure class="img-holder group col-span-3" style="--width: 474px; --height: 474px">
+              <img src="./assets/images/grid-1.jpg" width="474" height="474" loading="lazy" alt=""
+                class="img-cover duration-200 ease-linear group-hover:scale-[1.01]">
+            </figure>
+
+            <figure class="img-holder group" style="--width: 160px; --height: 160px">
+              <img src="./assets/images/grid-2.jpg" width="160" height="160" loading="lazy" alt=""
+                class="img-cover duration-200 ease-linear group-hover:scale-105">
+            </figure>
+
+            <figure class="img-holder group" style="--width: 160px; --height: 160px">
+              <img src="./assets/images/grid-3.jpg" width="160" height="160" loading="lazy" alt=""
+                class="img-cover duration-200 ease-linear group-hover:scale-105">
+            </figure>
+
+            <figure class="img-holder group" style="--width: 160px; --height: 160px">
+              <img src="./assets/images/grid-4.jpg" width="160" height="160" loading="lazy" alt=""
+                class="img-cover duration-200 ease-linear group-hover:scale-105">
+            </figure>
+          </div>
+
+          <figure class="img-holder group hidden lg:block" style="--width: 250px; --height: 500px">
+            <img src="./assets/images/grid-5.jpg" width="250" height="500" loading="lazy" alt=""
+              class="img-cover duration-200 ease-linear group-hover:scale-[1.01]">
+          </figure>
+        </div>
+
+      </div>
+
+      <img src="./assets/images/autumn-leaf.svg" loading="lazy" alt=""
+        class="absolute top-96 -left-2 opacity-5 max-w-56 animate-bouncing sm:-left-16">
+    </section>
+
+ 
+      - #New arrival
+    
+    <section id="latest">
+      <div
+        class="container max-w-[550px] mx-auto px-3 py-10 md:py-16 md:max-w-[1000px] lg:py-24 lg:max-w-[1200px] xl:max-w-[1400px] xxl:max-w-[1600px]">
+
+        <h1 class="text-caf_noir font-primary font-bold text-6xl text-center my-3">
+          New Arrival
+        </h1>
+
+        <p class="text-jet text-center text-lg max-w-xl mx-auto md:text-lg">
+          Discover the latest must-have arrivals! Elevate your style with our newest collection of trendsetting items.
+        </p>
+
+        <ul
+          class="grid-list grid gap-3 mt-6 xs:grid-cols-2 md:grid-cols-3 md:max-w-[800px] md:mx-auto lg:grid-cols-5 lg:gap-4 lg:max-w-[1370px] xl:gap-5">
+          <li class="group pb-6 space-y-5 max-w-64 rounded-lg duration-75 ease-linear">
+            <div class="img-box relative overflow-hidden">
+              <figure class="img-holder rounded-lg h-80" style="--width: 256px; --height: 320px;">
+                <img src="./assets/images/new-product-1.jpg" width="256" height="320" loading="lazy" alt=""
+                  class="img-cover duration-[0.5s] ease-linear group-hover:scale-105">
+              </figure>
+
+              <div
+                class="bg-[#d89245c7] text-white px-3 py-1 absolute top-2/4 left-2/4 -translate-x-2/4 flex items-center opacity-0 duration-75 ease-linear group-hover:-translate-y-2/4 group-hover:opacity-100">
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="bag-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="heart-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="eye-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+              </div>
+            </div>
+
+            <div class="card-content space-y-2">
+              <div class="flex justify-between items-start">
+                <p class="text-lg text-jet font-bold">
+                  Cable Roll Neck Sweater
+                </p>
+
+                <span class="bg-butterscotch px-2 py-1 text-sm text-papaya_whip font-bold">$25.75</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="group pb-6 space-y-5 max-w-64 rounded-lg duration-75 ease-linear">
+            <div class="img-box relative overflow-hidden">
+              <figure class="img-holder rounded-lg h-80" style="--width: 256px; --height: 324px;">
+                <img src="./assets/images/new-product-2.jpg" width="256" height="324" loading="lazy" alt=""
+                  class="img-cover duration-[0.5s] ease-linear group-hover:scale-105">
+              </figure>
+
+              <div
+                class="bg-[#d89245c7] text-white px-3 py-1 absolute top-2/4 left-2/4 -translate-x-2/4 flex items-center opacity-0 duration-75 ease-linear group-hover:-translate-y-2/4 group-hover:opacity-100">
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="bag-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="heart-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="eye-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+              </div>
+            </div>
+
+            <div class="card-content space-y-2">
+              <div class="flex justify-between items-start">
+                <p class="text-lg text-jet font-bold">
+                  CableKnit Sweater
+                </p>
+
+                <span class="bg-butterscotch px-2 py-1 text-sm text-papaya_whip font-bold">$25.75</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="group pb-6 space-y-5 max-w-64 rounded-lg duration-75 ease-linear xs:order-1 lg:order-none">
+            <div class="img-box relative overflow-hidden">
+              <figure class="img-holder rounded-lg h-80" style="--width: 474px; --height: 569px;">
+                <img src="./assets/images/new-product-3.png" width="474" height="569" loading="lazy" alt=""
+                  class="img-cover duration-[0.5s] ease-linear group-hover:scale-105">
+              </figure>
+
+              <div
+                class="bg-[#d89245c7] text-white px-3 py-1 absolute top-2/4 left-2/4 -translate-x-2/4 flex items-center opacity-0 duration-75 ease-linear group-hover:-translate-y-2/4 group-hover:opacity-100">
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="bag-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="heart-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="eye-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+              </div>
+            </div>
+
+            <div class="card-content space-y-2">
+              <div class="flex justify-between items-start">
+                <p class="text-lg text-jet font-bold">
+                  Wool Panda Diary Cover
+                </p>
+
+                <span class="bg-butterscotch px-2 py-1 text-sm text-papaya_whip font-bold">$25.75</span>
+              </div>
+            </div>
+          </li>
+
+          <li
+            class="off-card relative bg-no-repeat rounded-md bg-center bg-cover overflow-hidden p-3 xs:col-span-2 xs:mb-6 md:mb-0 md:p-5 md:order-1 lg:order-none"
+            style="background-image: url('./assets/images/off-1.jpg')">
+            <div class="bg-[#4f3120db] text-white max-w-max ms-auto px-4 py-5 rounded-md relative z-10 md:px-5 md:py-6">
+              <div class="flex justify-center items-center gap-3 mb-5 md:mb-9">
+                <span class="font-primary font-bold text-5xl leading-[0] mb-2 md:text-[64px]">45%</span>
+
+                <span class="italic">Off</span>
+              </div>
+
+              <p class="text-center mb-1">All new Flower Vase</p>
+
+              <a href="#"
+                class="font-primary font-semibold tracking-widest px-4 py-3 text-center border border-solid border-butterscotch">
+                See all products
+              </a>
+            </div>
+          </li>
+
+          <li
+            class="off-card relative bg-no-repeat rounded-md bg-center bg-cover overflow-hidden p-3 xs:col-span-2 xs:mb-6 md:mb-0 md:p-5 md:order-1 lg:order-none"
+            style="background-image: url('./assets/images/off-2.jpg')">
+            <div class="bg-[#4f3120db] text-white max-w-max ms-auto px-4 py-5 rounded-md relative z-10 md:px-5 md:py-6">
+              <div class="flex justify-center items-center gap-3 mb-5 md:mb-9">
+                <span class="font-primary font-bold text-5xl leading-[0] mb-2 md:text-[64px]">30%</span>
+
+                <span class="italic">Off</span>
+              </div>
+
+              <p class="text-center mb-1">All new Arrival watch</p>
+
+              <a href="#"
+                class="font-primary font-semibold tracking-widest px-4 py-3 text-center border border-solid border-butterscotch">
+                See all products
+              </a>
+            </div>
+          </li>
+
+          <li class="group pb-6 space-y-5 max-w-64 rounded-lg duration-75 ease-linear">
+            <div class="img-box relative overflow-hidden">
+              <figure class="img-holder rounded-lg h-80" style="--width: 256px; --height: 320px;">
+                <img src="./assets/images/new-product-4.jpg" width="256" height="320" loading="lazy" alt=""
+                  class="img-cover duration-[0.5s] ease-linear group-hover:scale-105">
+              </figure>
+
+              <div
+                class="bg-[#d89245c7] text-white px-3 py-1 absolute top-2/4 left-2/4 -translate-x-2/4 flex items-center opacity-0 duration-75 ease-linear group-hover:-translate-y-2/4 group-hover:opacity-100">
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="bag-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="heart-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="eye-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+              </div>
+            </div>
+
+            <div class="card-content space-y-2">
+              <div class="flex justify-between items-start">
+                <p class="text-lg text-jet font-bold">
+                  Vintage Lace Hand Watch
+                </p>
+
+                <span class="bg-butterscotch px-2 py-1 text-sm text-papaya_whip font-bold">$25.75</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="group pb-6 space-y-5 max-w-64 rounded-lg duration-75 ease-linear">
+            <div class="img-box relative overflow-hidden">
+              <figure class="img-holder rounded-lg h-80" style="--width: 256px; --height: 320px;">
+                <img src="./assets/images/new-product-5.jpg" width="256" height="320" loading="lazy" alt=""
+                  class="img-cover duration-[0.5s] ease-linear group-hover:scale-105">
+              </figure>
+
+              <div
+                class="bg-[#d89245c7] text-white px-3 py-1 absolute top-2/4 left-2/4 -translate-x-2/4 flex items-center opacity-0 duration-75 ease-linear group-hover:-translate-y-2/4 group-hover:opacity-100">
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="bag-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="heart-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="eye-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+              </div>
+            </div>
+
+            <div class="card-content space-y-2">
+              <div class="flex justify-between items-start">
+                <p class="text-lg text-jet font-bold">
+                  Boho crochet Earrings
+                </p>
+
+                <span class="bg-butterscotch px-2 py-1 text-sm text-papaya_whip font-bold">$25.75</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="group pb-6 space-y-5 max-w-64 rounded-lg duration-75 ease-linear xs:order-1 lg:order-none">
+            <div class="img-box relative overflow-hidden">
+              <figure class="img-holder rounded-lg h-80" style="--width: 256px; --height: 256px;">
+                <img src="./assets/images/new-product-6.jpg" width="256" height="256" loading="lazy" alt=""
+                  class="img-cover duration-[0.5s] ease-linear group-hover:scale-105">
+              </figure>
+
+              <div
+                class="bg-[#d89245c7] text-white px-3 py-1 absolute top-2/4 left-2/4 -translate-x-2/4 flex items-center opacity-0 duration-75 ease-linear group-hover:-translate-y-2/4 group-hover:opacity-100">
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="bag-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="heart-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+
+                <a href="#" class="h-9 w-9 grid place-items-center">
+                  <ion-icon name="eye-outline" aria-hidden="true" class="text-[22px]"></ion-icon>
+                </a>
+              </div>
+            </div>
+
+            <div class="card-content space-y-2">
+              <div class="flex justify-between items-start">
+                <p class="text-lg text-jet font-bold">
+                  White Wool Panda Bag
+                </p>
+
+                <span class="bg-butterscotch px-2 py-1 text-sm text-papaya_whip font-bold">$25.75</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+  
+      - #Testimonials
+   
+
+    <section class="bg-caf_noir text-white">
+      <div class="container mx-auto px-3 py-10 sm:px-7 md:py-16 lg:py-24">
+        <h2 class="text-5xl font-primary mb-6 flex items-center gap-2 lg:text-6xl">
+          Customer
+          <span class="italic">Reviews</span>
+        </h2>
+
+        <div data-slider-container>
+          <ul class="slider min-h-[560px] mb-6 sm:min-h-[300px] md:min-h-[305px]" data-slider>
+            <li
+              class="slider-item testimonial-card bg-papaya_whip group rounded-md overflow-hidden min-w-[450px] sm:min-w-[580px] sm:max-w-[580px] sm:grid sm:grid-cols-[0.4fr_1fr] md:min-w-[756px]">
+              <figure class="img-holder h-64 sm:h-full" style="--width: 250px; --height: 210px;">
+                <img src="./assets/images/purchased-items-1.jpg" width="250" height="210" loading="lazy" alt=""
+                  class="img-cover duration-[0.5s] ease-linear group-hover:scale-105">
+              </figure>
+
+              <div class="card-content px-4 py-5 md:px-5 md:py-8">
+                <div class="rating">
+                  <ion-icon name="star" aria-hidden="true" class="text-butterscotch"></ion-icon>
+                  <ion-icon name="star" aria-hidden="true" class="text-butterscotch"></ion-icon>
+                  <ion-icon name="star" aria-hidden="true" class="text-butterscotch"></ion-icon>
+                  <ion-icon name="star" aria-hidden="true" class="text-butterscotch"></ion-icon>
+                  <ion-icon name="star" aria-hidden="true" class="text-butterscotch"></ion-icon>
+                </div>
+
+                <h3 class="text-caf_noir text-lg uppercase font-semibold my-5">Love It!</h3>
+
+                <p class="text-jet text-sm mb-5 max-h-[80px] overflow-y-auto">
+                  “This scarf instantly became my go-to for chilly mornings. The red tartan is so rich and classic — it
+                  feels like something you'd borrow from your grandma's closet and never give back. Soft, warm, and full
+                  of quiet charm.”
+                </p>
+
+                <div class="pt-5 flex items-center gap-4 border-t border-solid border-[#1111111a]">
+                  <figure class="img-holder avatar" style="--width: 60px; --height: 60px;">
+                    <img src="./assets/images/avatar-1.png" width="60" height="60" alt="" class="img-cover">
+                  </figure>
+
+                  <div>
+                    <p class="text-caf_noir text-sm font-semibold mb-1">Emily T.</p>
+
+                    <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
+                      <p class="text-jet text-xs font-semibold">Item purchased:</p>
+
+                      <a href="#" class="text-butterscotch text-xs font-semibold underline flex items-center gap-1">
+                        Red Tartan Cashmere Scarf
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li
+              class="slider-item testimonial-card bg-papaya_whip group rounded-md overflow-hidden min-w-[450px] sm:min-w-[580px] sm:max-w-[580px] sm:grid sm:grid-cols-[0.4fr_1fr] md:min-w-[756px]">
+              <figure class="img-holder h-64 sm:h-full" style="--width: 251px; --height: 210px;">
+                <img src="./assets/images/purchased-items-2.png" width="251" height="210" loading="lazy" alt=""
+                  class="img-cover duration-[0.5s] ease-linear group-hover:scale-105">
+              </figure>
+
+              <div class="card-content px-4 py-5 md:px-5 md:py-8">
+                <div class="rating">
+                  <ion-icon name="star" aria-hidden="true" class="text-butterscotch"></ion-icon>
+                  <ion-icon name="star" aria-hidden="true" class="text-butterscotch"></ion-icon>
+                  <ion-icon name="star" aria-hidden="true" class="text-butterscotch"></ion-icon>
+                  <ion-icon name="star" aria-hidden="true" class="text-butterscotch"></ion-icon>
+                  <ion-icon name="star" aria-hidden="true" class="text-butterscotch"></ion-icon>
+                </div>
+
+                <h3 class="text-caf_noir text-lg uppercase font-semibold my-5">Love It!</h3>
+
+                <p class="text-jet text-sm mb-5 max-h-[80px] overflow-y-auto">
+                  “I wasn’t expecting to love a scarf this much, but wow. The black tartan has that perfect balance of
+                  minimal and vintage. It feels luxurious without trying too hard — and it's unbelievably soft against
+                  the skin.”
+                </p>
+
+                <div class="pt-5 flex items-center gap-4 border-t border-solid border-[#1111111a]">
+                  <figure class="img-holder avatar" style="--width: 60px; --height: 60px;">
+                    <img src="./assets/images/avatar-2.png" width="60" height="60" alt="" class="img-cover">
+                  </figure>
+
+                  <div>
+                    <p class="text-caf_noir text-sm font-semibold mb-1">Hannah K.</p>
+
+                    <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
+                      <p class="text-jet text-xs font-semibold">Item purchased:</p>
+
+                      <a href="#" class="text-butterscotch text-xs font-semibold underline flex items-center gap-1">
+                        Black Tartan Cashmere Scarf
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li
+              class="slider-item testimonial-card bg-papaya_whip group rounded-md overflow-hidden min-w-[450px] sm:min-w-[580px] sm:max-w-[580px] sm:grid sm:grid-cols-[0.4fr_1fr] md:min-w-[756px]">
+              <figure class="img-holder h-64 sm:h-full" style="--width: 250px; --height: 210px;">
+                <img src="./assets/images/purchased-items-3.png" width="250" height="210" loading="lazy" alt=""
+                  class="img-cover duration-[0.5s] ease-linear group-hover:scale-105">
+              </figure>
+
+              <div class="card-content px-4 py-5 md:px-5 md:py-8">
+                <div class="rating">
+                  <ion-icon name="star" aria-hidden="true" class="text-butterscotch"></ion-icon>
+                  <ion-icon name="star" aria-hidden="true" class="text-butterscotch"></ion-icon>
+                  <ion-icon name="star" aria-hidden="true" class="text-butterscotch"></ion-icon>
+                  <ion-icon name="star" aria-hidden="true" class="text-butterscotch"></ion-icon>
+                  <ion-icon name="star" aria-hidden="true" class="text-butterscotch"></ion-icon>
+                </div>
+
+                <h3 class="text-caf_noir text-lg uppercase font-semibold my-5">Love It!</h3>
+
+                <p class="text-jet text-sm mb-5 max-h-[80px] overflow-y-auto">
+                  “I didn’t expect much, but this candle surprised me. The frosted glass looks great on my shelf, and
+                  the soft glow is perfect for relaxing. The scent is subtle and calming — just right for my space.”
+                </p>
+
+                <div class="pt-5 flex items-center gap-4 border-t border-solid border-[#1111111a]">
+                  <figure class="img-holder avatar" style="--width: 60px; --height: 60px;">
+                    <img src="./assets/images/avatar-3.png" width="60" height="60" alt="" class="img-cover">
+                  </figure>
+
+                  <div>
+                    <p class="text-caf_noir text-sm font-semibold mb-1">Ethan V.</p>
+
+                    <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
+                      <p class="text-jet text-xs font-semibold">Item purchased:</p>
+
+                      <a href="#" class="text-butterscotch text-xs font-semibold underline flex items-center gap-1">
+                        Frosted Glass Scented Candles
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li
+              class="slider-item testimonial-card bg-papaya_whip group rounded-md overflow-hidden min-w-[450px] sm:min-w-[580px] sm:max-w-[580px] sm:grid sm:grid-cols-[0.4fr_1fr] md:min-w-[756px]">
+              <figure class="img-holder h-64 sm:h-full" style="--width: 562px; --height: 678px;">
+                <img src="./assets/images/purchased-items-4.png" width="562" height="678" loading="lazy" alt=""
+                  class="img-cover duration-[0.5s] ease-linear group-hover:scale-105">
+              </figure>
+
+              <div class="card-content px-4 py-5 md:px-5 md:py-8">
+                <div class="rating">
+                  <ion-icon name="star" aria-hidden="true" class="text-butterscotch"></ion-icon>
+                  <ion-icon name="star" aria-hidden="true" class="text-butterscotch"></ion-icon>
+                  <ion-icon name="star" aria-hidden="true" class="text-butterscotch"></ion-icon>
+                  <ion-icon name="star" aria-hidden="true" class="text-butterscotch"></ion-icon>
+                  <ion-icon name="star" aria-hidden="true" class="text-butterscotch"></ion-icon>
+                </div>
+
+                <h3 class="text-caf_noir text-lg uppercase font-semibold my-5">Love It!</h3>
+
+                <p class="text-jet text-sm mb-5 max-h-[80px] overflow-y-auto">
+                  “This tote is everything I didn’t know I needed. The little embroidered bicycle and fall leaves?
+                  Adorable. It feels like something you’d find in a storybook — practical, but with a bit of poetry. I
+                  use it almost every day.”
+                </p>
+
+                <div class="pt-5 flex items-center gap-4 border-t border-solid border-[#1111111a]">
+                  <figure class="img-holder avatar" style="--width: 60px; --height: 60px;">
+                    <img src="./assets/images/avatar-4.jpeg" width="60" height="60" alt="" class="img-cover">
+                  </figure>
+
+                  <div>
+                    <p class="text-caf_noir text-sm font-semibold mb-1">Sofia R.</p>
+
+                    <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
+                      <p class="text-jet text-xs font-semibold">Item purchased:</p>
+
+                      <a href="#" class="text-butterscotch text-xs font-semibold underline flex items-center gap-1">
+                        Fall Leaves Bicycle Handcrafted Tote Bag
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <div
+            class="flex items-center justify-center gap-3 border-t border-t-caf_noir mx-auto md:-order-1 md:mx-0 mx:ms-auto">
+            <button class="arrow-button" aria-label="slide prev" data-prev-btn>
+              <ion-icon name="chevron-back-outline" aria-hidden="true" class="text-papaya_whip font-bold"></ion-icon>
+            </button>
+
+            <button class="arrow-button" aria-label="slide next" data-next-btn>
+              <ion-icon name="chevron-forward-outline" aria-hidden="true" class="text-papaya_whip font-bold"></ion-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="parallax" style="background-image: url('./assets/images/cta-bg.png')"></div>
+  </main>
+
+
+    - #Footer
+  
+
+  <footer id="info">
+    <div class="container mx-auto">
+      <div class="relative px-3 py-12 space-y-6 md:space-y-24 lg:pb-24">
+        <a href="#" class="logo">
+          <img src="./assets/images/logo-dark.svg" loading="lazy" alt="" class="md:min-w-36">
+        </a>
+
+        <div class="flex flex-wrap gap-y-6 gap-x-20 sm:grid sm:grid-cols-2 md:grid-cols-4 md:gap-x-10">
+          <h3 class="text-caf_noir font-primary font-bold text-4xl md:mt-4">Get in Touch</h3>
+
+          <div>
+            <span class="text-caf_noir font-bold">Mailing Address</span>
+
+            <p>
+              123 Anywhere St., Any City, <br> State, Country 12345
+            </p>
+          </div>
+
+          <div class="mt-auto md:mt-0">
+            <span class="text-caf_noir font-bold">Email Address</span>
+
+            <a href="mailto:hello@reallygreatsite.com">
+              hello@reallygreatsite.com
+            </a>
+          </div>
+
+          <div>
+            <div class="flex items-center gap-2 mb-2 md:-mt-10">
+              <a href="#" class="bg-caf_noir h-7 w-7 grid place-items-center rounded-full group">
+                <ion-icon name="logo-twitter" aria-hidden="true"
+                  class="text-papaya_whip duration-150 group-hover:scale-125"></ion-icon>
+              </a>
+
+              <a href="#" class="bg-caf_noir h-7 w-7 grid place-items-center rounded-full group">
+                <ion-icon name="logo-facebook" aria-hidden="true"
+                  class="text-papaya_whip duration-150 group-hover:scale-125"></ion-icon>
+              </a>
+
+              <a href="#" class="bg-caf_noir h-7 w-7 grid place-items-center rounded-full group">
+                <ion-icon name="logo-github" aria-hidden="true"
+                  class="text-papaya_whip duration-150 group-hover:scale-125"></ion-icon>
+              </a>
+
+              <a href="#" class="bg-caf_noir h-7 w-7 grid place-items-center rounded-full group">
+                <ion-icon name="logo-instagram" aria-hidden="true"
+                  class="text-papaya_whip duration-150 group-hover:scale-125"></ion-icon>
+              </a>
+            </div>
+
+            <span class="text-caf_noir font-bold md:mt-3">Phone Number</span>
+
+            <a href="tel:(123) 456 7890">
+              (123) 456 7890
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom px-3 py-4 space-y-6">
+        <p>
+          Copyright
+          <a href="" class="text-caf_noir font-bold underline inline">myda</a>
+          2025 | All rights reserved
+        </p>
+      </div>
+    </div>
+  </footer>
+
+-->
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

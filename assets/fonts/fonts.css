@@ -1,0 +1,48 @@
+/* Custom Fonts */
+@font-face {
+  font-family: 'Athelas';
+  src: url('./Athelas.ttc') format('truetype-collection');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Athelas';
+  src: url('./Athelas.ttc') format('truetype-collection');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Athelas';
+  src: url('./Athelas.ttc') format('truetype-collection');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Athelas';
+  src: url('./Athelas.ttc') format('truetype-collection');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ArimaKoshi';
+  src: url('./ArimaKoshi.ttc') format('truetype-collection');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ArimaKoshi';
+  src: url('./ArimaKoshi.ttc') format('truetype-collection');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}

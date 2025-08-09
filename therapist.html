@@ -1,0 +1,384 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MYDA | Our Therapist</title>
+  <meta name="description" content="Meet MYDA's expert therapists.">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+  <link rel="icon" href="./assets/favicon/favicon.ico" sizes="any">
+  <link rel="manifest" href="./assets/favicon/site.webmanifest">
+  <meta name="theme-color" content="#b38b40">
+
+  <!-- Compiled site CSS + fonts -->
+  <link href="./dist/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/fonts/fonts.css">
+
+  <!-- Material Symbols -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close,menu&display=block" />
+
+  <!-- Site script (for navbar toggles) -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- Page-specific CSS to faithfully match the reference design -->
+  <style>
+    :root {
+      --gold:#b38b40; /* site gold */
+      --gold-200:#c8a563;
+      --paper:#fff3dc; /* papaya_whip */
+      --ink:#333333;  /* jet */
+      --coffee:#4f3120; /* caf_noir */
+      --card-border:#d5d5d5; /* neutral gray border like reference */
+    }
+
+    body { background: var(--paper); color: var(--ink); padding-top: 5rem; }
+
+    /* Page header block */
+    .page-wrap { max-width: 1200px; margin: 0 auto; padding: 2.5rem 1rem 3rem; }
+    .page-title { color: var(--gold); font-family: "Athelas", serif; font-weight: 600; font-size: clamp(1.6rem, 3vw, 2rem); margin: 0 0 1.25rem; }
+    .intro { max-width: 980px; line-height: 1.7; font-size: 1rem; color: var(--ink); }
+    .intro p { margin: 0 0 1rem; }
+
+    /* Card list */
+    .therapist-list { margin-top: 1.5rem; display: grid; gap: 1.5rem; }
+
+    .therapist-card {
+      background: #efefef; /* neutral light gray panel like reference */
+      border: 1px solid var(--card-border);
+      display: grid;
+      grid-template-columns: 260px 1fr; /* width closer to reference */
+      align-items: stretch;
+      gap: 0;
+    }
+
+    .card-photo { position: relative; overflow: hidden; }
+    .card-photo img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%); display: block; }
+
+    .card-gold {
+      background: var(--gold);
+      color: #ffffff;
+      padding: 22px 26px 18px 38px; /* add left padding to clear accent bar */
+      display: flex; flex-direction: column; justify-content: space-between;
+      position: relative;
+    }
+
+    /* thin darker gold accent bar like the reference */
+    .card-gold::before {
+      content: "";
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 22px;
+      background: #a57a36; /* darker gold accent */
+    }
+
+    .t-name { font-family: "Athelas", serif; font-weight: 600; font-size: 1.15rem; margin: 0 0 10px; color: #fff; }
+    .t-bio { font-size: 0.98rem; line-height: 1.65; margin: 0 0 12px; color: #fff; }
+    .t-bio strong { font-weight: 600; color: #fff; }
+
+    .card-links { display: flex; justify-content: flex-end; gap: 24px; align-items: center; margin-top: 4px; }
+    .card-links a { color: #fff; text-decoration: underline; font-size: 0.95rem; }
+    .card-links a:hover { color: #f3e7c8; }
+
+    /* Sharp corners globally already default; ensure no rounding here */
+    .therapist-card, .card-photo img, .card-gold { border-radius: 0; }
+
+    /* Responsive */
+    @media (max-width: 1000px) {
+      .therapist-card { grid-template-columns: 260px 1fr; }
+    }
+    @media (max-width: 800px) {
+      .therapist-card { grid-template-columns: 1fr; }
+      .card-photo { height: clamp(340px, 80vw, 420px); }
+      .card-photo img { object-position: top center; }
+      .card-links { margin-top: 12px; }
+      /* Mobile header/logo sizing so the bar doesn't crop content */
+      .header { height: 4rem !important; }
+      .header .logo img { height: 40px !important; }
+      body { padding-top: 4.5rem; }
+    }
+
+    /* Navbar improvements (page-specific) */
+    .header { position: fixed !important; top: 0 !important; left: 0 !important; width: 100% !important; height: 4.5rem; background: #3d2b1f !important; box-shadow: 0 6px 16px rgba(0,0,0,0.08); z-index: 60; border-bottom: 1px solid rgba(0,0,0,0.25); }
+    .header .container { max-width: 1200px !important; width: 100% !important; margin: 0 auto !important; padding: 0 1.25rem !important; height: 100%; display: flex; justify-content: space-between; align-items: center; }
+    .navbar { margin-left: auto; }
+    .header .logo img { height: 84px; width: auto; }
+    .navbar ul { gap: 1.25rem; flex-wrap: nowrap; align-items: center; }
+    .navbar-link { color: #ffffff !important; font-weight: 400; font-size: 0.95rem; letter-spacing: 0.02em; white-space: nowrap; line-height: 1; }
+    .navbar-link:hover { color: var(--gold) !important; text-decoration: underline; text-underline-offset: 3px; }
+    /* Highlight the current page link */
+    .navbar a[href="therapist.html"] { color: var(--gold) !important; border-bottom: 2px solid var(--gold); text-decoration: none; font-weight: 600; padding-bottom: 2px; }
+
+    /* Tighten for medium desktops to avoid wrapping */
+    @media (max-width: 1200px) and (min-width: 1000px) {
+      .header .logo img { height: 40px; }
+      .navbar ul { gap: 1rem; }
+      .navbar-link { font-size: 0.9rem; }
+    }
+
+    /* Booking panel (inline calendar) */
+    .booking-panel-wrap { grid-column: 1 / -1; overflow: hidden; max-height: 0; transition: max-height 300ms ease; }
+    .booking-panel-wrap.open { max-height: 720px; }
+    .booking-panel {
+      background: #ffffff; border: 1px solid var(--card-border); border-top: 3px solid var(--gold);
+      padding: 16px; color: var(--ink);
+    }
+    .booking-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+    .booking-title { font-weight: 600; color: var(--coffee); }
+    .booking-title strong { color: var(--gold); font-weight: 700; }
+    .booking-close { background: transparent; border: none; color: var(--coffee); cursor: pointer; padding: 6px; }
+    .booking-close:hover { color: var(--gold); }
+
+    .booking-body { display: grid; gap: 12px; }
+    .date-header { display: flex; align-items: center; justify-content: center; gap: 10px; }
+    .date-nav { background: transparent; border: 1px solid var(--card-border); color: var(--coffee); padding: 4px 8px; cursor: pointer; }
+    .date-nav:hover { background: #f5efe2; }
+    .month-label { font-weight: 700; color: var(--coffee); min-width: 180px; text-align: center; }
+
+    .date-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; align-items: stretch; }
+    .day-name { font-size: 0.75rem; text-transform: uppercase; color: #6b6b6b; text-align: center; padding: 6px 0; }
+    .date-cell { border: 1px solid var(--card-border); background: #faf7ef; color: var(--coffee); padding: 10px 0; text-align: center; cursor: pointer; }
+    .date-cell:hover { background: #f3e7d0; }
+    .date-cell.selected { background: var(--gold); color: #fff; border-color: var(--gold); }
+    .date-cell.disabled { opacity: 0.45; cursor: not-allowed; background: #f3f3f3; color: #888; }
+
+    .time-section { margin-top: 2px; }
+    .time-title { font-size: 0.9rem; color: var(--coffee); margin-bottom: 6px; }
+    .time-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); gap: 8px; }
+    .time-slot { border: 1px solid var(--card-border); background: #ffffff; color: var(--coffee); padding: 8px 10px; cursor: pointer; text-align: center; }
+    .time-slot:hover { background: #f5efe2; }
+    .time-slot.selected { background: var(--gold); border-color: var(--gold); color: #fff; }
+
+    .booking-actions { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 6px; }
+    .selection-display { font-size: 0.95rem; color: var(--coffee); }
+    .booking-confirm { background: var(--gold); color: #fff; border: none; padding: 10px 14px; cursor: pointer; font-weight: 600; }
+    .booking-confirm[disabled] { opacity: 0.6; cursor: not-allowed; }
+
+    /* Thank-you modal overlay */
+    .thanks-overlay {
+      position: fixed; inset: 0; background: rgba(20, 12, 4, 0.55);
+      display: grid; place-items: center; padding: 1rem; z-index: 1000;
+    }
+    .thanks-modal {
+      position: relative; background: #ffffff; color: var(--coffee);
+      width: min(560px, 92vw); border: 1px solid var(--card-border); border-top: 4px solid var(--gold);
+      box-shadow: 0 22px 60px rgba(0,0,0,0.25); padding: 28px 24px; animation: modal-pop 320ms ease-out both;
+    }
+    .thanks-logo { width: 160px; height: auto; display: block; margin: 4px auto 10px; }
+    .thanks-heading { text-align: center; margin: 8px 0 6px; font-size: 1.5rem; font-weight: 700; color: var(--gold); font-family: "Athelas", serif; }
+    .thanks-text { text-align: center; color: var(--coffee); margin: 0 0 16px; line-height: 1.6; }
+    .thanks-home-btn { display: block; margin: 0 auto; background: var(--gold); color: #fff; border: none; padding: 10px 16px; cursor: pointer; font-weight: 700; }
+    .thanks-home-btn:hover { background: var(--gold-200); }
+
+    /* Confetti */
+    .thanks-modal .confetti { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+    .thanks-modal .confetti span { position: absolute; top: -12px; width: 8px; height: 12px; opacity: 0.95; animation: confetti-fall linear forwards; }
+
+    @keyframes confetti-fall { to { transform: translateY(120vh) rotate(600deg); opacity: 1; } }
+    @keyframes modal-pop { from { opacity: 0; transform: translateY(8px) scale(0.96); } to { opacity: 1; transform: none; } }
+
+    /* Mobile tweaks */
+    @media (max-width: 800px) {
+      .booking-panel { padding: 12px; }
+      .time-grid { grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); }
+    }
+  </style>
+</head>
+
+<body class="bg-papaya_whip text-jet font-secondary">
+  <!-- Header (copied from index and link-targets adjusted) -->
+  <header class="header" data-header>
+    <div class="container relative flex justify-between items-center px-3 py-5 mx-auto">
+      <a href="index.html#home" class="logo">
+        <img src="./assets/images-new/MYDA_LOGO.png" width="200" height="25" alt="MYDA" class="w-48 md:w-52 lg:w-56 xxl:w-64">
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+          <span class="material-symbols-rounded" aria-hidden="true">close</span>
+        </button>
+
+        <ul class="md:flex md:items-center md:gap-3 xl:gap-7">
+          <li><a href="index.html#home" class="navbar-link">Home</a></li>
+          <li><a href="index.html#about" class="navbar-link">About</a></li>
+          <li><a href="index.html#services" class="navbar-link">Services</a></li>
+          <li><a href="therapist.html" class="navbar-link">Our Therapist</a></li>
+          <li><a href="index.html#contacts" class="navbar-link">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <button class="h-10 w-10 grid place-items-center md:hidden" aria-label="toggle menu" data-nav-toggler>
+        <span class="material-symbols-rounded text-papaya_whip" aria-hidden="true">menu</span>
+      </button>
+
+      <div class="overlay" data-overlay data-nav-toggler></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-wrap">
+      <h2 class="page-title">Our Therapist</h2>
+
+      <div class="intro">
+        <p>Behind every MYDA experience is a skilled touch and a practiced hand. Our therapists are more than professionals—they are wellness artisans, each with years of experience in the art of massage, holistic care, and personalized treatment.</p>
+        <p>Trained to deliver more than just relief, they bring presence, intuition, and a deep understanding of the body's rhythms. Every movement is intentional. Every moment, tailored.</p>
+        <p>This isn't just service. It's sanctuary, delivered by those who know how to hold space—with grace, skill, and quiet mastery.</p>
+      </div>
+
+      <div class="therapist-list">
+        <!-- Card 1 -->
+        <article class="therapist-card">
+          <figure class="card-photo">
+            <img src="./assets/images-new/therapists_folder/thera1.jpg" alt="Leila Serrano">
+          </figure>
+          <div class="card-gold">
+            <div>
+              <h3 class="t-name">Leila Serrano</h3>
+              <p class="t-bio">Trained in both Eastern and Western modalities, Leila brings over a decade of expertise in therapeutic massage. She blends technique with instinct, creating deeply restorative sessions that balance body and mind.</p>
+              <p class="t-bio"><strong>Signature Style:</strong> Customized recovery massage with lymphatic focus.</p>
+            </div>
+            <div class="card-links">
+              <a href="index.html#services">Back to our services</a>
+              <a href="#" class="book-now">Book now</a>
+            </div>
+          </div>
+          <div class="booking-panel-wrap" data-booking-panel></div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="therapist-card">
+          <figure class="card-photo">
+            <img src="./assets/images-new/therapists_folder/thera2.jpg" alt="Amina Rafiq">
+          </figure>
+          <div class="card-gold">
+            <div>
+              <h3 class="t-name">Amina Rafiq</h3>
+              <p class="t-bio">With over 9 years of experience in holistic bodywork, Amina specializes in sleep therapy and deep relaxation techniques. Her calm presence and intuitive touch have made her a favorite among clients seeking stillness and renewal.</p>
+              <p class="t-bio"><strong>Signature Style:</strong> Slow-pressure sleep massage with aromatherapy.</p>
+            </div>
+            <div class="card-links">
+              <a href="index.html#services">Back to our services</a>
+              <a href="#" class="book-now">Book now</a>
+            </div>
+          </div>
+          <div class="booking-panel-wrap" data-booking-panel></div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="therapist-card">
+          <figure class="card-photo">
+            <img src="./assets/images-new/therapists_folder/thera3.jpg" alt="Hana Al Marzouqi">
+          </figure>
+          <div class="card-gold">
+            <div>
+              <h3 class="t-name">Elias Navarro</h3>
+              <p class="t-bio">Elias blends lymphatic drainage with gentle sculpting techniques to release tension and reduce fluid retention. His approach is deeply nurturing yet precise.</p>
+              <p class="t-bio"><strong>Signature Style:</strong> Detox and lymphatic fusion for lightness and clarity.</p>
+            </div>
+            <div class="card-links">
+              <a href="index.html#services">Back to our services</a>
+              <a href="#" class="book-now">Book now</a>
+            </div>
+          </div>
+          <div class="booking-panel-wrap" data-booking-panel></div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="therapist-card">
+          <figure class="card-photo">
+            <img src="./assets/images-new/therapists_folder/thera4jpg.jpg" alt="Noura Al Shamsi">
+          </figure>
+          <div class="card-gold">
+            <div>
+              <h3 class="t-name">Hana Al Marzouqi</h3>
+              <p class="t-bio">Focused on recovery and mobility, Hana combines deep tissue techniques with breathwork to unlock stubborn tension and restore ease of movement.</p>
+              <p class="t-bio"><strong>Signature Style:</strong> Restorative deep tissue with targeted release.</p>
+            </div>
+            <div class="card-links">
+              <a href="index.html#services">Back to our services</a>
+              <a href="#" class="book-now">Book now</a>
+            </div>
+          </div>
+          <div class="booking-panel-wrap" data-booking-panel></div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="therapist-card">
+          <figure class="card-photo">
+            <img src="./assets/images-new/therapists_folder/thera5jpg.jpg" alt="Maya Reyes">
+          </figure>
+          <div class="card-gold">
+            <div>
+              <h3 class="t-name">Karim Delaunay</h3>
+              <p class="t-bio">Karim is known for his intuitive, grounding touch and thoughtful pacing. He creates a calm, safe space that invites the body to rest and the mind to let go.</p>
+              <p class="t-bio"><strong>Signature Style:</strong> Balancing relaxation massage with warm oil therapy.</p>
+            </div>
+            <div class="card-links">
+              <a href="index.html#services">Back to our services</a>
+              <a href="#" class="book-now">Book now</a>
+            </div>
+          </div>
+          <div class="booking-panel-wrap" data-booking-panel></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="site-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <!-- Contact details -->
+        <div class="footer-col footer-contact">
+          <h3 class="footer-heading">Contact us:</h3>
+          <div class="footer-row">
+            <span class="footer-label">Address:</span>
+            <p class="footer-value">Lorem ipsum Dolor Init – Abu Dhabi UAE</p>
+          </div>
+          <div class="footer-row">
+            <span class="footer-label">Tel no.:</span>
+            <a href="tel:+9715645880944" class="footer-value">+97156 45880944</a>
+          </div>
+          <div class="footer-row">
+            <span class="footer-label">email us:</span>
+            <a href="mailto:info@myda.ae" class="footer-value">info@myda.ae</a>
+          </div>
+        </div>
+
+        <!-- Social links -->
+        <div class="footer-col footer-social">
+          <h3 class="footer-heading">Follow us:</h3>
+          <ul class="footer-social-list" aria-label="social links">
+            <li><a href="#" aria-label="Facebook"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="#" aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            <li><a href="#" aria-label="Telegram"><ion-icon name="paper-plane-outline"></ion-icon></a></li>
+            <li><a href="#" aria-label="WhatsApp"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+            <li><a href="#" aria-label="TikTok"><ion-icon name="logo-tiktok"></ion-icon></a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter form -->
+        <div class="footer-col footer-newsletter">
+          <h3 class="footer-heading">Sign up to our Newsletter, Promotions and Deals</h3>
+          <form class="footer-form" action="#" method="post">
+            <input type="text" name="name" class="footer-input" placeholder="name:" />
+            <input type="tel" name="tel" class="footer-input" placeholder="tel no.:" />
+            <button type="submit" class="footer-submit">subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <p class="footer-legal">© 2025 MYDA. All rights reserved. MYDA is a registered brand under UAE copyright law. Any unauthorized use of its logo, content, or visual assets is strictly prohibited and subject to legal action.</p>
+    </div>
+  </footer>
+
+  <!-- Ionicons for footer social icons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+
+</html>
