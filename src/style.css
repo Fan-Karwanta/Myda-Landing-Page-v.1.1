@@ -85,22 +85,63 @@ ion-icon {
 }
 
 /* Desktop navigation positioning - ensure nav links are on the right */
-@media (min-width: 768px) {
+@media (min-width: 1280px) {
   .header .container {
     display: flex;
-    justify-content: space-between;
+    /* Use flex-start so auto-margins can push navbar to the far right */
+    justify-content: flex-start;
     align-items: center;
+    flex-wrap: nowrap;
   }
   
   .navbar {
-    margin-left: 35rem;
+    /* Avoid fixed offset that can push nav off-screen at certain zoom levels */
+    margin-left: auto;
   }
   
   .navbar ul {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    flex-wrap: nowrap;
   }
+}
+
+/* Ensure desktop header container spans full width so navbar aligns to the far right */
+@media (min-width: 1200px) {
+  .header .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .header .container {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+@media (min-width: 1600px) {
+  .header .container {
+    display: flex !important;
+    grid-template-columns: none !important;
+  }
+}
+
+/* Keep nav items on one line and tighten gaps at mid-large widths */
+@media (min-width: 1200px) {
+  .navbar-link { white-space: nowrap; }
+}
+
+@media (min-width: 1280px) and (max-width: 1399px) {
+  .navbar ul { gap: 1rem; }
+  .navbar-link { font-size: 0.95rem; }
 }
 
 /* Hero heading with colored "gold" word using gradient background */
@@ -1468,7 +1509,8 @@ ion-icon {
   min-height: 180px;
   padding: 28px 32px;
   width: 240px; /* uniform width across three cards */
-  border: 2px solid rgba(255,255,255,0.9);
+  border: 1px solid rgba(255,255,255,0.9);
+  box-sizing: border-box;
   color: #ffffff;
   text-decoration: none;
   transition: transform .2s ease, background-color .2s ease;
@@ -1481,7 +1523,7 @@ ion-icon {
   border: 0px solid rgba(255,255,255,0.9);
 }
 
-.sleep-price { grid-area: num; font-size: clamp(4rem, 7.5vw, 5.5rem); font-weight: 300; line-height: 0.92; letter-spacing: 0.2px; }
+.sleep-price { grid-area: num; font-size: clamp(4rem, 7.5vw, 5.5rem); font-weight: 300; line-height: 0.92; letter-spacing: 0px; }
 .sleep-unit { grid-area: unit; align-self: baseline; margin-left: 8px; font-size: clamp(1rem, 1.3vw, 1.1rem); opacity: 0.95; }
 .sleep-cost { grid-area: cost; margin-top: 4px; font-size: 1rem; opacity: 0.9; }
 
@@ -1526,7 +1568,7 @@ ion-icon {
     padding-right: 22px;
   }
   .sleep-pricing .sleep-price-card:nth-child(3) .sleep-price {
-    font-size: clamp(2.6rem, 6.2vw, 4.2rem);
+    font-size: clamp(2.4rem, 5.6vw, 3.4rem);
   }
   .sleep-pricing .sleep-price-card:nth-child(3) .sleep-unit {
     margin-left: 6px;
@@ -1534,11 +1576,11 @@ ion-icon {
   }
   /* Uniform font sizing across all three cards on desktop */
   .sleep-pricing .sleep-price {
-    font-size: clamp(2.6rem, 6.2vw, 4.2rem);
+    font-size: clamp(2.4rem, 5.6vw, 3.6rem);
   }
   .sleep-pricing .sleep-unit {
-    font-size: clamp(0.95rem, 1.2vw, 1.05rem);
-    margin-left: 6px;
+    font-size: clamp(0.85rem, 1vw, 0.95rem);
+    margin-left: 4px;
   }
 }
 
@@ -1600,7 +1642,7 @@ ion-icon {
   .contact-section > .container { max-width: none; width: 100%; padding-left: 0 !important; padding-right: 0 !important; }
   .contact-container { min-height: 680px; max-width: none; width: 100%; }
   .contact-hand-bg { width: clamp(1200px, 92vw, 2200px); }
-  .contact-corner-hand { right: 524px; top: 24px; }
+  .contact-corner-hand { right: 424px; top: 24px; }
 }
 
 /* Contact Content */

@@ -98,9 +98,13 @@
       .card-photo img { object-position: top center; }
       .card-links { margin-top: 12px; }
       /* Mobile header/logo sizing so the bar doesn't crop content */
-      .header { height: 4rem !important; }
-      .header .logo img { height: 40px !important; }
-      body { padding-top: 4.5rem; }
+      .header { height: 7.25rem !important; }
+      .header .logo { display: flex; align-items: center; flex-shrink: 0; }
+      .header .logo img { height: 80px !important; width: auto !important; max-width: 88vw !important; display: block; object-fit: contain; }
+      .header .container { transform: none !important; padding: 1rem 1.25rem !important; align-items: center !important; min-height: 6.75rem; }
+      .header [data-nav-toggler] { width: 44px !important; height: 44px !important; }
+      .header .material-symbols-rounded { font-size: 28px !important; }
+      body { padding-top: 7.75rem; }
     }
 
     /* Navbar improvements (page-specific) */
@@ -208,7 +212,7 @@
           <li><a href="index.html#about" class="navbar-link">About</a></li>
           <li><a href="index.html#services" class="navbar-link">Services</a></li>
           <li><a href="therapist.html" class="navbar-link">Our Therapist</a></li>
-          <li><a href="index.html#contacts" class="navbar-link">Contact Us</a></li>
+          <li><a href="index.html#contact" class="navbar-link">Contact Us</a></li>
         </ul>
       </nav>
 
