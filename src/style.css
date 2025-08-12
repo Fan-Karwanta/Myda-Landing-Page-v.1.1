@@ -2231,6 +2231,15 @@ ion-icon {
     text-align: center;
   }
   
+  /* Reorder buttons on mobile - Book now button appears first (higher up) */
+  .massage-modal-actions a[href="#services"] {
+    order: 2;
+  }
+  
+  .massage-modal-actions #bookNowBtn {
+    order: 1;
+  }
+  
   .massage-modal-close {
     position: fixed;
     top: 15px;
