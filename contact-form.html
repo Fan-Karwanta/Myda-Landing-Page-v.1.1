@@ -1,0 +1,339 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--
+    - primary meta tags
+  -->
+  <title>Contact Form | Myda - Premium Massage Spa</title>
+  <meta name="title" content="Contact Form - Myda Premium Massage Spa">
+  <meta name="description"
+    content="Book your premium massage service with Myda - Contact form for home luxury massage and wellness service">
+
+  <!--
+    - favicons
+  -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+  <link rel="icon" href="./assets/favicon/favicon.ico" sizes="any">
+  <link rel="manifest" href="./assets/favicon/site.webmanifest">
+  <meta name="theme-color" content="#b38b40">
+
+  <!-- 
+   - css link
+  -->
+  <link href="./dist/style.css" rel="stylesheet">
+
+  <!-- 
+    - custom font link
+  -->
+  <link rel="stylesheet" href="./assets/fonts/fonts.css">
+
+  <!--
+    - material icon link
+  -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close,menu,shopping_cart_checkout&display=block" />
+
+  <!-- 
+    - script link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- Additional header styling to ensure dark background -->
+  <style>
+    .header {
+      background-color: #4f3120 !important; /* caf_noir - dark brown */
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+    }
+    
+    .navbar-link {
+      color: #fff3dc !important; /* papaya_whip - light color */
+    }
+    
+    .navbar-link:hover {
+      color: #b38b40 !important; /* gold color on hover */
+    }
+    
+    body {
+      padding-top: 80px; /* Add space for fixed header */
+    }
+    
+    /* Improved header layout for all screen sizes */
+    .header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1rem;
+    }
+    
+    /* Mobile menu button styling */
+    [data-nav-toggler] {
+      color: #fff3dc;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+    
+    /* Ensure logo size is appropriate for all screens */
+    .header .logo {
+      display: block;
+      max-width: 50%;
+    }
+    
+    .header .logo img {
+      width: 6rem !important; /* Smaller logo for mobile */
+      height: auto !important;
+    }
+    
+    /* Mobile navbar styling */
+    .navbar {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      max-width: 350px;
+      height: 100vh;
+      background-color: #4f3120;
+      padding: 2rem 1rem;
+      transition: 0.25s ease;
+      z-index: 1001;
+    }
+    
+    .navbar.active {
+      right: 0;
+      transition: 0.5s ease;
+    }
+    
+    .navbar ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    
+    .navbar-link {
+      font-size: 1.1rem;
+      padding: 0.5rem 0;
+      display: block;
+    }
+    
+    .nav-close-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      color: #fff3dc;
+      font-size: 1.5rem;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+    
+    /* Overlay for mobile menu */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.25s ease;
+    }
+    
+    .overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+    
+    /* Responsive adjustments */
+    @media (min-width: 768px) {
+      .header .logo img {
+        width: 9rem !important; /* Slightly larger on tablet */
+      }
+      
+      .header .container {
+        padding: 0.75rem 1.5rem;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .header .logo img {
+        width: 10rem !important; /* Medium size on desktop */
+      }
+      
+      .navbar {
+        position: static;
+        width: auto;
+        height: auto;
+        padding: 0;
+        background-color: transparent;
+        max-width: none;
+      }
+      
+      .navbar ul {
+        flex-direction: row;
+        margin-top: 0;
+      }
+      
+      .nav-close-btn {
+        display: none;
+      }
+      
+      .navbar-link {
+        font-size: 1rem;
+        padding: 0;
+      }
+    }
+    
+    @media (min-width: 1536px) {
+      .header .logo img {
+        width: 11rem !important; /* Largest size on big screens */
+      }
+    }
+  </style>
+
+</head>
+
+<body class="bg-papaya_whip text-jet font-secondary">
+
+  <!-- 
+   - #Header
+ -->
+
+  <!-- Header (copied from therapist.html for consistency) -->
+  <header class="header" data-header>
+    <div class="container mx-auto">
+      <a href="index.html#home" class="logo">
+        <img src="./assets/images-new/MYDA_LOGO.png" width="200" height="25" alt="MYDA" class="w-48 md:w-52 lg:w-56 xxl:w-64">
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+          <span class="material-symbols-rounded" aria-hidden="true">close</span>
+        </button>
+
+        <ul class="md:flex md:items-center md:gap-3 xl:gap-7">
+          <li><a href="index.html#home" class="navbar-link">Home</a></li>
+          <li><a href="index.html#about" class="navbar-link">About</a></li>
+          <li><a href="index.html#services" class="navbar-link">Services</a></li>
+          <li><a href="therapist.html" class="navbar-link">Our Therapist</a></li>
+          <li><a href="index.html#contact" class="navbar-link">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <button class="h-10 w-10 grid place-items-center md:hidden" aria-label="toggle menu" data-nav-toggler>
+        <span class="material-symbols-rounded text-papaya_whip" aria-hidden="true">menu</span>
+      </button>
+
+      <div class="overlay" data-overlay data-nav-toggler></div>
+    </div>
+  </header>
+  
+  <main>
+
+    <!-- 
+      - #Contact Section
+    -->
+    <section id="contact" class="contact-section">
+      <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-14 xxl:px-20 py-12 sm:py-14 md:py-16 lg:py-20">
+        <div class="contact-container">
+          <!-- Background Hand Icon -->
+          <div class="contact-bg-hand">
+            <img src="./assets/images-new/myda_hand_brown_full.png" alt="Hand Background" class="contact-hand-bg" />
+          </div>
+          
+          <!-- Top Right Hand Icon -->
+          <div class="contact-corner-hand">
+            <img src="./assets/images-new/myda_hand_brown_full.png" alt="Hand Icon" class="contact-hand-corner" />
+          </div>
+          
+          <!-- Contact Form Content -->
+          <div class="contact-content">
+            <!-- Logo -->
+            <div class="contact-logo">
+              <img src="./assets/images-new/MYDA_LOGO.png" alt="MYDA Logo" class="contact-logo-img" />
+            </div>
+            
+            <!-- Contact Form -->
+            <form class="contact-form">
+              <div class="contact-field">
+                <input type="text" id="contact-name" name="name" class="contact-input" placeholder="name:" />
+              </div>
+              
+              <div class="contact-field">
+                <input type="tel" id="contact-tel" name="tel" class="contact-input" placeholder="tel no.:" />
+              </div>
+              
+              <a href="#" class="contact-submit-link">Send OTP</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section End -->
+
+  </main>
+
+  <!-- Footer (copied from therapist.html for consistency) -->
+  <footer id="footer" class="site-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <!-- Contact details -->
+        <div class="footer-col footer-contact">
+          <h3 class="footer-heading">Contact us:</h3>
+          <div class="footer-row">
+            <span class="footer-label">Address:</span>
+            <p class="footer-value">Lorem ipsum Dolor Init – Abu Dhabi UAE</p>
+          </div>
+          <div class="footer-row">
+            <span class="footer-label">Tel no.:</span>
+            <a href="tel:+9715645880944" class="footer-value">+97156 45880944</a>
+          </div>
+          <div class="footer-row">
+            <span class="footer-label">email us:</span>
+            <a href="mailto:info@myda.ae" class="footer-value">info@myda.ae</a>
+          </div>
+        </div>
+
+        <!-- Social links -->
+        <div class="footer-col footer-social">
+          <h3 class="footer-heading">Follow us:</h3>
+          <ul class="footer-social-list" aria-label="social links">
+            <li><a href="#" aria-label="Facebook"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="#" aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            <li><a href="#" aria-label="Telegram"><ion-icon name="paper-plane-outline"></ion-icon></a></li>
+            <li><a href="#" aria-label="WhatsApp"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+            <li><a href="#" aria-label="TikTok"><ion-icon name="logo-tiktok"></ion-icon></a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter form -->
+        <div class="footer-col footer-newsletter">
+          <h3 class="footer-heading">Sign up to our Newsletter, Promotions and Deals</h3>
+          <form class="footer-form" action="#" method="post">
+            <input type="text" name="name" class="footer-input" placeholder="name:" />
+            <input type="tel" name="tel" class="footer-input" placeholder="tel no.:" />
+            <button type="submit" class="footer-submit">subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <p class="footer-legal">© 2025 MYDA. All rights reserved. MYDA is a registered brand under UAE copyright law. Any unauthorized use of its logo, content, or visual assets is strictly prohibited and subject to legal action.</p>
+    </div>
+  </footer>
+
+  <!-- Ionicons for footer social icons (matching therapist.html) -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

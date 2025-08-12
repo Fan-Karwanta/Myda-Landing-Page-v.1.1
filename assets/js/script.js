@@ -469,24 +469,52 @@ function resetPriceSelection() {
   }
 }
 
+// Flag to track if Book Now event listener has been added
+let bookNowListenerAdded = false;
+
 function initializePriceSelection() {
   const priceCards = document.querySelectorAll('.massage-pricing-card');
   const bookNowBtn = document.getElementById('bookNowBtn');
   
   priceCards.forEach(card => {
-    card.addEventListener('click', function() {
-      // Remove selected class from all cards
-      priceCards.forEach(c => c.classList.remove('selected'));
-      
-      // Add selected class to clicked card
-      this.classList.add('selected');
-      
-      // Enable book now button
-      if (bookNowBtn) {
-        bookNowBtn.classList.remove('disabled');
-      }
-    });
+    // Remove existing listeners first
+    card.removeEventListener('click', handlePriceCardClick);
+    // Add new listener
+    card.addEventListener('click', handlePriceCardClick);
   });
+  
+  // Add Book Now event listener only once
+  if (bookNowBtn && !bookNowListenerAdded) {
+    bookNowBtn.addEventListener('click', handleBookNowClick);
+    bookNowListenerAdded = true;
+  }
+}
+
+function handlePriceCardClick() {
+  const priceCards = document.querySelectorAll('.massage-pricing-card');
+  const bookNowBtn = document.getElementById('bookNowBtn');
+  
+  // Remove selected class from all cards
+  priceCards.forEach(c => c.classList.remove('selected'));
+  
+  // Add selected class to clicked card
+  this.classList.add('selected');
+  
+  // Enable book now button
+  if (bookNowBtn) {
+    bookNowBtn.classList.remove('disabled');
+  }
+}
+
+function handleBookNowClick(e) {
+  e.preventDefault();
+  
+  // Check if a price card is selected
+  const selectedCard = document.querySelector('.massage-pricing-card.selected');
+  if (selectedCard) {
+    // Redirect to contact form page
+    window.location.href = 'contact-form.html';
+  }
 }
 
 function closeMassageModal() {
