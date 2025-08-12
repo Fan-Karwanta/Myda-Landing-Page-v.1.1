@@ -363,3 +363,167 @@ for (let i = 0; i < $sliderContainers.length; i++) {
     });
   });
 })();
+
+// Massage Modal System
+const massageServices = {
+  'Relaxation Massage': {
+    image: './assets/images-new/massage_types/26.webp',
+    description: 'Long flowing strokes to calm your nerves and ease everyday stress. Using gentle, rhythmic movements and calming aromatherapy, this treatment promotes relaxation, reduces anxiety, and encourages uninterrupted sleep. Perfect for unwinding before bed or resetting after restless nights.'
+  },
+  'Postnatal Massage': {
+    image: './assets/images-new/massage_types/postnatal_massage_bellamama.jpg.webp',
+    description: 'Gentle touch to restore, rebalance, and relieve tension after childbirth. You gave life—now let your body heal.'
+  },
+  'Slimming Lymphatic Combo Massage': {
+    image: './assets/images-new/massage_types/iStock-520413044.jpg',
+    description: 'A sculpting blend of firm strokes and drainage to tone and flush toxins. Using targeted pressure and lymphatic drainage techniques, this treatment helps contour the body, break down stubborn areas, and boost circulation for a lighter, more energized feeling.'
+  },
+  'Slimming Massage': {
+    image: './assets/images-new/massage_types/dsc6089-15399456973578_920x920_tt_90.jpg',
+    description: 'Targeted pressure to contour, break down fat, and boost circulation. This intensive treatment uses specialized techniques to help sculpt and tone problem areas while improving overall body confidence and wellness.'
+  },
+  'Detox Massage': {
+    image: './assets/images-new/massage_types/detox-massage-therapy-1.jpg',
+    description: 'Gentle rhythmic movements to cleanse your system and boost immunity. Using specialized drainage techniques and detoxifying oils, this treatment helps eliminate toxins, reduce bloating, and restore your body\'s natural balance.'
+  },
+  'Lymphatic Drainage': {
+    image: './assets/images-new/massage_types/legs-sports-massage-therapy-2021-08-26-16-53-49-utc.webp',
+    description: 'Gentle rhythmic movements to cleanse your system and boost immunity. This specialized technique helps reduce swelling, improve circulation, and support your body\'s natural detoxification process for optimal wellness.'
+  },
+  'Sleep Massage': {
+    image: './assets/images-new/massage_types/hero-1.jpg',
+    description: 'A deeply soothing, slow-pressure massage designed to quiet the nervous system and guide the body into a state of deep rest. Using gentle, rhythmic strokes and calming aromatherapy, this treatment promotes relaxation, reduces anxiety, and encourages uninterrupted sleep. Perfect for unwinding before bed or resetting after restless nights.'
+  },
+  'Hot Stone Massage': {
+    image: './assets/images-new/massage_types/hot-stone-massage-in-dubai-DWS.jpg',
+    description: 'Warm stones melt muscle tension and ground your energy. The heated stones penetrate deep into muscles, releasing chronic tension while the therapeutic heat promotes profound relaxation and stress relief.'
+  },
+  'Cupping Massage': {
+    image: './assets/images-new/massage_types/94b91f7b-3522-4c12-86c4-1762f321d087.jpg',
+    description: 'Suction therapy to lift, release, and improve blood flow. This ancient technique uses gentle suction to release fascial restrictions, improve circulation, and provide deep muscle relief for enhanced mobility and wellness.'
+  },
+  'Sports Massage': {
+    image: './assets/images-new/massage_types/massage-your-questions-answered.jpg',
+    description: 'Performance-driven pressure to recover muscles and prevent injury. Designed for athletes and active individuals, this treatment uses targeted techniques to enhance performance, speed recovery, and prevent sports-related injuries.'
+  },
+  'Deep Tissue': {
+    image: './assets/images-new/massage_types/ad.jpeg',
+    description: 'Intense pressure to target knots and chronic pain at the root. This therapeutic treatment focuses on deeper muscle layers and connective tissue to release chronic tension patterns and provide lasting pain relief.'
+  },
+  'Prenatal Massage': {
+    image: './assets/images-new/massage_types/Prenatal1.png',
+    description: 'Soothing strokes designed for your changing body and baby\'s comfort. Specially adapted techniques provide relief from pregnancy discomforts while ensuring safety and relaxation for both mother and baby.'
+  },
+  'Reflexology Massage': {
+    image: './assets/images-new/massage_types/dadad.png',
+    description: 'Focused foot therapy to balance your entire body\'s systems. By applying pressure to specific reflex points on the feet, this treatment promotes healing and balance throughout the entire body for holistic wellness.'
+  },
+  'Balinese Massage': {
+    image: './assets/images-new/massage_types/hero-1.jpg',
+    description: 'A tropical fusion of acupressure, stretches, and essential oils. This traditional Indonesian technique combines gentle stretches, acupressure, and aromatherapy to restore balance and harmony to body and mind.'
+  },
+  'Thai Massage': {
+    image: './assets/images-new/massage_types/thai-massage-2-1024x683.jpg',
+    description: 'Stretch-based therapy to energize, realign, and awaken your body. This ancient practice combines yoga-like stretches, acupressure, and energy work to improve flexibility, reduce tension, and restore vitality.'
+  },
+  'Aromatherapy': {
+    image: './assets/images-new/massage_types/aromatherapy-massageAA.jpg',
+    description: 'Essential oils + massage to calm the mind and awaken the senses. This sensory journey combines therapeutic massage with carefully selected essential oils to promote deep relaxation and emotional balance.'
+  }
+};
+
+function openMassageModal(serviceName) {
+  const modal = document.getElementById('massageModal');
+  const service = massageServices[serviceName];
+  
+  if (!service) return;
+  
+  // Update modal content
+  document.getElementById('modalImage').src = service.image;
+  document.getElementById('modalImage').alt = serviceName;
+  document.getElementById('modalTitle').textContent = serviceName;
+  document.getElementById('modalDescription').textContent = service.description;
+  
+  // Reset price selection and book now button
+  resetPriceSelection();
+  
+  // Show modal
+  modal.style.display = 'block';
+  document.body.style.overflow = 'hidden';
+  
+  // Initialize price card click handlers
+  initializePriceSelection();
+}
+
+function resetPriceSelection() {
+  // Remove selected class from all price cards
+  const priceCards = document.querySelectorAll('.massage-pricing-card');
+  priceCards.forEach(card => {
+    card.classList.remove('selected');
+  });
+  
+  // Disable book now button
+  const bookNowBtn = document.getElementById('bookNowBtn');
+  if (bookNowBtn) {
+    bookNowBtn.classList.add('disabled');
+  }
+}
+
+function initializePriceSelection() {
+  const priceCards = document.querySelectorAll('.massage-pricing-card');
+  const bookNowBtn = document.getElementById('bookNowBtn');
+  
+  priceCards.forEach(card => {
+    card.addEventListener('click', function() {
+      // Remove selected class from all cards
+      priceCards.forEach(c => c.classList.remove('selected'));
+      
+      // Add selected class to clicked card
+      this.classList.add('selected');
+      
+      // Enable book now button
+      if (bookNowBtn) {
+        bookNowBtn.classList.remove('disabled');
+      }
+    });
+  });
+}
+
+function closeMassageModal() {
+  const modal = document.getElementById('massageModal');
+  modal.style.display = 'none';
+  document.body.style.overflow = 'auto';
+}
+
+// Close modal when clicking outside of it
+window.onclick = function(event) {
+  const modal = document.getElementById('massageModal');
+  if (event.target === modal) {
+    closeMassageModal();
+  }
+}
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    closeMassageModal();
+  }
+});
+
+// Initialize massage modal triggers
+document.addEventListener('DOMContentLoaded', function() {
+  const serviceCards = document.querySelectorAll('.service-card');
+  
+  serviceCards.forEach(card => {
+    const serviceTitle = card.querySelector('.service-title').textContent.trim();
+    const bookNowSpan = card.querySelector('.service-cta');
+    
+    if (bookNowSpan) {
+      bookNowSpan.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        openMassageModal(serviceTitle);
+      });
+    }
+  });
+});

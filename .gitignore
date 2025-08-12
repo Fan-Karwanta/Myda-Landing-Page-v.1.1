@@ -1,6 +1,9 @@
 # Dependencies
 node_modules/
 
+#dist
+dist/
+
 # Build output
 
 # Environment variables
