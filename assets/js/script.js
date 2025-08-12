@@ -504,6 +504,16 @@ function handlePriceCardClick() {
   if (bookNowBtn) {
     bookNowBtn.classList.remove('disabled');
   }
+  
+  // Auto-scroll to "Book now" button on mobile devices
+  if (window.innerWidth <= 768 && bookNowBtn) {
+    setTimeout(() => {
+      bookNowBtn.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      });
+    }, 100); // Small delay to ensure the DOM has updated
+  }
 }
 
 function handleBookNowClick(e) {
